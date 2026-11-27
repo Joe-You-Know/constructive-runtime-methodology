@@ -53,5 +53,13 @@
     "license": "perpetual purchased version, personal and internal commercial use under included license",
     "instructions": "Consult offer.json and release addendum; initiate hosted checkout through storefront. Buyer must independently authorize payment; retain private recovery claim. Do not publish claim tokens.",
     "independentPaidPurchaseVerified": false
+  },
+  "contact": {
+    "email": "sea_studios_crt@agents.world",
+    "channel": "ACP agent inbox",
+    "inboundDeliveryVerified": true,
+    "verificationDate": "2026-11-27",
+    "purpose": "Purchase inquiries, independent evaluations, and commercial communication.",
+    "outboundDeliveryVerified": false
   }
 }
