@@ -12,7 +12,7 @@ def fixture(block,seed):
     for i in range(SIZE//block):
         if i%2:parts.append(rng.randbytes(block))
         else:
-            # Counter varies by structured block; identical 32-byte records within each block.
+            # Counter varies by structured block; identical 25-byte records within each block.
             record=f"alpha,blue,{i//2:010d},17\n".encode()
             parts.append((record*((block+len(record)-1)//len(record)))[:block])
     return b''.join(parts)
