@@ -47,6 +47,29 @@
       "commercialCodecIncluded": false,
       "testsPassed": 5,
       "defaultWithoutCandidateEvidence": "FREE_REFERENCE_UNTIL_MEASURED"
+    },
+    "researchCodecTrial": {
+      "schema": "crt-research-trial-v1",
+      "downloadUrl": "https://raw.githubusercontent.com/Joe-You-Know/constructive-runtime-methodology/ffa28e7c239033605ef555fb744e9eb346a6b6b0/buyer-evaluation/ConstructiveRT_research_trial_v1.zip",
+      "sha256": "192740a5b119e02bf3b1fc991124c90564857dc7a3e0095eac3a79eab2ba7905",
+      "bytes": 13461,
+      "costUSD": 0,
+      "offline": true,
+      "maxSourceBytes": 1048576,
+      "python": "3.11+",
+      "codecs": [
+        "CRTC1-zlib6 (supported complete shell grammar only)",
+        "CRTC-G1 (general byte data)"
+      ],
+      "baseline": "gzip-6",
+      "sourceProvenance": "Recovered original November 2026 research implementations, with reduced bounds and new trial wrapper",
+      "originalTestsPassed": 30,
+      "trialTestGroupsPassed": 3,
+      "commercialRuntimeIncluded": false,
+      "commercialRuntimeEvaluated": false,
+      "trialLimitEditable": true,
+      "usage": "Extract and run python trial.py --source your-file.bin --out trial-output; or --fixture shell-types-only",
+      "decisionScope": "Exact research codec measurements only; no inference of commercial runtime performance or automatic purchase authorization"
     }
   },
   "discoveryFree": true,
