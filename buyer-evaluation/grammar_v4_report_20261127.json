@@ -1,0 +1,2148 @@
+{
+  "schema": "crt-exceptions-v4",
+  "python": "3.12.6 (tags/v3.12.6:a4a2d2b, Sep  6 2024, 20:11:23) [MSC v.1940 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "sourceLimit": 1048576,
+  "stop": 32,
+  "primaryRoundTrips": 23,
+  "extraRoundTrips": 8,
+  "randomizedRoundTrips": 250,
+  "negativeControls": 124,
+  "commercialRuntimeEvaluated": false,
+  "timingScope": "single in-memory run, encoder search included, fixed order; no disk or transport",
+  "rows": [
+    {
+      "case": "mixed-512-20261127",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "921d5c96ea9d15760e949ea40006428051b970b4fa8bb2e432031fd122097adf",
+      "gzipBytes": 536849,
+      "v3Bytes": 534096,
+      "v4Bytes": 534096,
+      "encodedSHA256": "caf6247eaacd89752ad70ba13af5120f6d9f2160dfc2b81fd76fbe1699daaf9d",
+      "exact": true,
+      "gzipEncodeMs": 16.59789984114468,
+      "v3EncodeMs": 418.149400036782,
+      "v4EncodeMs": 435.9337999485433,
+      "v4DecodeMs": 4.853700054809451,
+      "modes": {
+        "repeat": 15,
+        "raw": 1024,
+        "patch": 1009
+      },
+      "periodicRuns": 1024,
+      "exceptions": 0,
+      "runSample": [
+        [
+          0,
+          512,
+          25,
+          "repeat",
+          0
+        ],
+        [
+          1024,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          2048,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          3072,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          4096,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          5120,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          6144,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          7168,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          8192,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          9216,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          10240,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          11264,
+          512,
+          25,
+          "patch",
+          0
+        ]
+      ]
+    },
+    {
+      "case": "mixed-512-20261128",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "5a6b8c186d7c6f4b9a791d1d8e4d3ec4b0b0399ae35ccca3b08bde9fff9303cf",
+      "gzipBytes": 536859,
+      "v3Bytes": 533964,
+      "v4Bytes": 533964,
+      "encodedSHA256": "a1d7e77152ddf49c623083ab00ba32e846fdade92fec27aa3d2d9432f43ec1b0",
+      "exact": true,
+      "gzipEncodeMs": 16.06599986553192,
+      "v3EncodeMs": 414.1259000170976,
+      "v4EncodeMs": 444.52200015075505,
+      "v4DecodeMs": 4.651299910619855,
+      "modes": {
+        "repeat": 9,
+        "raw": 1024,
+        "patch": 1015
+      },
+      "periodicRuns": 1024,
+      "exceptions": 0,
+      "runSample": [
+        [
+          0,
+          512,
+          25,
+          "repeat",
+          0
+        ],
+        [
+          1024,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          2048,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          3072,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          4096,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          5120,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          6144,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          7168,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          8192,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          9216,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          10240,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          11264,
+          512,
+          25,
+          "patch",
+          0
+        ]
+      ]
+    },
+    {
+      "case": "mixed-512-20261129",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "a5ac5fb8370c1c8e4f384b160d6978a6adf4a6973f298ce25a5d5c6899efc229",
+      "gzipBytes": 536856,
+      "v3Bytes": 533966,
+      "v4Bytes": 533966,
+      "encodedSHA256": "a869ecc05f7c7d3c34d4eecd31bbf9111c03fffbe785dab9ee13337b3c44589a",
+      "exact": true,
+      "gzipEncodeMs": 16.03150018490851,
+      "v3EncodeMs": 416.73159995116293,
+      "v4EncodeMs": 431.7184998653829,
+      "v4DecodeMs": 4.687299951910973,
+      "modes": {
+        "repeat": 9,
+        "raw": 1024,
+        "patch": 1015
+      },
+      "periodicRuns": 1024,
+      "exceptions": 0,
+      "runSample": [
+        [
+          0,
+          512,
+          25,
+          "repeat",
+          0
+        ],
+        [
+          1024,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          2048,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          3072,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          4096,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          5120,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          6144,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          7168,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          8192,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          9216,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          10240,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          11264,
+          512,
+          25,
+          "patch",
+          0
+        ]
+      ]
+    },
+    {
+      "case": "mixed-4096-20261127",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "f67ea20894348c717a8edb03c2f62cf2d6f5e7b7e22ed94c536816d959a9504e",
+      "gzipBytes": 530379,
+      "v3Bytes": 525575,
+      "v4Bytes": 525575,
+      "encodedSHA256": "a697b74313ba149068f0bf435cd45cd2de2f8e821c86270fb22434f51203246b",
+      "exact": true,
+      "gzipEncodeMs": 15.431699808686972,
+      "v3EncodeMs": 391.6222001425922,
+      "v4EncodeMs": 397.2735998686403,
+      "v4DecodeMs": 2.167799975723028,
+      "modes": {
+        "repeat": 3,
+        "raw": 128,
+        "patch": 125
+      },
+      "periodicRuns": 128,
+      "exceptions": 0,
+      "runSample": [
+        [
+          0,
+          4096,
+          25,
+          "repeat",
+          0
+        ],
+        [
+          8192,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          16384,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          24576,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          32768,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          40960,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          49152,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          57344,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          65536,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          73728,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          81920,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          90112,
+          4096,
+          25,
+          "patch",
+          0
+        ]
+      ]
+    },
+    {
+      "case": "mixed-4096-20261128",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "a4506209c1184827b432075d042a2f97d9b3c0b2f44454acb7e12197bffeb56d",
+      "gzipBytes": 530363,
+      "v3Bytes": 525530,
+      "v4Bytes": 525530,
+      "encodedSHA256": "1e5f4b0ba81518c7cd7b2ddf2253f842d03050a0a88601aa39dca31cab28ce7d",
+      "exact": true,
+      "gzipEncodeMs": 15.610700007528067,
+      "v3EncodeMs": 393.49859999492764,
+      "v4EncodeMs": 401.1154999025166,
+      "v4DecodeMs": 2.542200032621622,
+      "modes": {
+        "repeat": 1,
+        "raw": 128,
+        "patch": 127
+      },
+      "periodicRuns": 128,
+      "exceptions": 0,
+      "runSample": [
+        [
+          0,
+          4096,
+          25,
+          "repeat",
+          0
+        ],
+        [
+          8192,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          16384,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          24576,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          32768,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          40960,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          49152,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          57344,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          65536,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          73728,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          81920,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          90112,
+          4096,
+          25,
+          "patch",
+          0
+        ]
+      ]
+    },
+    {
+      "case": "mixed-4096-20261129",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "b82a02ec534e1a8d93071e636036fabf053132e50ebdf7a34d64def66a0dac26",
+      "gzipBytes": 530380,
+      "v3Bytes": 525530,
+      "v4Bytes": 525530,
+      "encodedSHA256": "401282ca515ace29d630288df254e253f88a40f70ba526956bfedb898130258b",
+      "exact": true,
+      "gzipEncodeMs": 16.295199980959296,
+      "v3EncodeMs": 391.09480008482933,
+      "v4EncodeMs": 407.1122999303043,
+      "v4DecodeMs": 2.472599968314171,
+      "modes": {
+        "repeat": 1,
+        "raw": 128,
+        "patch": 127
+      },
+      "periodicRuns": 128,
+      "exceptions": 0,
+      "runSample": [
+        [
+          0,
+          4096,
+          25,
+          "repeat",
+          0
+        ],
+        [
+          8192,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          16384,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          24576,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          32768,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          40960,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          49152,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          57344,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          65536,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          73728,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          81920,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          90112,
+          4096,
+          25,
+          "patch",
+          0
+        ]
+      ]
+    },
+    {
+      "case": "mixed-65536-20261127",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "25800ce625ace147ab02722fb79a54f0e15b9ca05a7872b66abe28d250a562b3",
+      "gzipBytes": 527905,
+      "v3Bytes": 524440,
+      "v4Bytes": 524440,
+      "encodedSHA256": "19f6033d1755400a8f31ea0427c300de88070df7afef85559cae0fd19a6f6329",
+      "exact": true,
+      "gzipEncodeMs": 14.216999989002943,
+      "v3EncodeMs": 378.1808998901397,
+      "v4EncodeMs": 386.3276999909431,
+      "v4DecodeMs": 1.6159999649971724,
+      "modes": {
+        "repeat": 1,
+        "raw": 8,
+        "patch": 7
+      },
+      "periodicRuns": 8,
+      "exceptions": 0,
+      "runSample": [
+        [
+          0,
+          65536,
+          25,
+          "repeat",
+          0
+        ],
+        [
+          131072,
+          65536,
+          25,
+          "patch",
+          0
+        ],
+        [
+          262144,
+          65536,
+          25,
+          "patch",
+          0
+        ],
+        [
+          393216,
+          65536,
+          25,
+          "patch",
+          0
+        ],
+        [
+          524288,
+          65536,
+          25,
+          "patch",
+          0
+        ],
+        [
+          655360,
+          65536,
+          25,
+          "patch",
+          0
+        ],
+        [
+          786432,
+          65536,
+          25,
+          "patch",
+          0
+        ],
+        [
+          917504,
+          65536,
+          25,
+          "patch",
+          0
+        ]
+      ]
+    },
+    {
+      "case": "mixed-65536-20261128",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "70a71dbc1e6ad815c06fa648bf37bfdeb97fe7e214da467176a6421cb7cd89d5",
+      "gzipBytes": 527905,
+      "v3Bytes": 524440,
+      "v4Bytes": 524440,
+      "encodedSHA256": "3c43531d70297e36081cf083ffcf9e100920e8dca45678ddf4c1711ceaccd731",
+      "exact": true,
+      "gzipEncodeMs": 14.088500058278441,
+      "v3EncodeMs": 376.06800021603703,
+      "v4EncodeMs": 383.82550003007054,
+      "v4DecodeMs": 1.9509000703692436,
+      "modes": {
+        "repeat": 1,
+        "raw": 8,
+        "patch": 7
+      },
+      "periodicRuns": 8,
+      "exceptions": 0,
+      "runSample": [
+        [
+          0,
+          65536,
+          25,
+          "repeat",
+          0
+        ],
+        [
+          131072,
+          65536,
+          25,
+          "patch",
+          0
+        ],
+        [
+          262144,
+          65536,
+          25,
+          "patch",
+          0
+        ],
+        [
+          393216,
+          65536,
+          25,
+          "patch",
+          0
+        ],
+        [
+          524288,
+          65536,
+          25,
+          "patch",
+          0
+        ],
+        [
+          655360,
+          65536,
+          25,
+          "patch",
+          0
+        ],
+        [
+          786432,
+          65536,
+          25,
+          "patch",
+          0
+        ],
+        [
+          917504,
+          65536,
+          25,
+          "patch",
+          0
+        ]
+      ]
+    },
+    {
+      "case": "mixed-65536-20261129",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "bb10db317696c9a4fa6870a23d1c5b496deb26751d5333dc1ae66883445d3fdf",
+      "gzipBytes": 527900,
+      "v3Bytes": 524440,
+      "v4Bytes": 524440,
+      "encodedSHA256": "cb18dd517699d791e0d15c043edc8e190f5f74fb7456cd41ba1bc9f14dac138e",
+      "exact": true,
+      "gzipEncodeMs": 13.818900100886822,
+      "v3EncodeMs": 383.6660000961274,
+      "v4EncodeMs": 389.7895999252796,
+      "v4DecodeMs": 1.9342999439686537,
+      "modes": {
+        "repeat": 1,
+        "raw": 8,
+        "patch": 7
+      },
+      "periodicRuns": 8,
+      "exceptions": 0,
+      "runSample": [
+        [
+          0,
+          65536,
+          25,
+          "repeat",
+          0
+        ],
+        [
+          131072,
+          65536,
+          25,
+          "patch",
+          0
+        ],
+        [
+          262144,
+          65536,
+          25,
+          "patch",
+          0
+        ],
+        [
+          393216,
+          65536,
+          25,
+          "patch",
+          0
+        ],
+        [
+          524288,
+          65536,
+          25,
+          "patch",
+          0
+        ],
+        [
+          655360,
+          65536,
+          25,
+          "patch",
+          0
+        ],
+        [
+          786432,
+          65536,
+          25,
+          "patch",
+          0
+        ],
+        [
+          917504,
+          65536,
+          25,
+          "patch",
+          0
+        ]
+      ]
+    },
+    {
+      "case": "shifted-137",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "c6067e6a0ec1db40914821efa9de5d3d84fae3bd91bbb185b57947b622cc7975",
+      "gzipBytes": 530267,
+      "v3Bytes": 525398,
+      "v4Bytes": 525398,
+      "encodedSHA256": "f86149328e86e1b6e700a8d42d5a241c4b26696ddb7c18f37d39b35e8cce63d2",
+      "exact": true,
+      "gzipEncodeMs": 15.426900004968047,
+      "v3EncodeMs": 395.8203000947833,
+      "v4EncodeMs": 391.5017999242991,
+      "v4DecodeMs": 2.539499895647168,
+      "modes": {
+        "repeat": 2,
+        "raw": 128,
+        "patch": 127
+      },
+      "periodicRuns": 129,
+      "exceptions": 0,
+      "runSample": [
+        [
+          0,
+          137,
+          1,
+          "repeat",
+          0
+        ],
+        [
+          137,
+          4096,
+          25,
+          "repeat",
+          0
+        ],
+        [
+          8329,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          16521,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          24713,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          32905,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          41097,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          49289,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          57481,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          65673,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          73865,
+          4096,
+          25,
+          "patch",
+          0
+        ],
+        [
+          82057,
+          4096,
+          25,
+          "patch",
+          0
+        ]
+      ]
+    },
+    {
+      "case": "shifted-1",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "b33f6226529f1306860cde51b4344697d98adf31438eb6816b55f5ad189ddd94",
+      "gzipBytes": 536873,
+      "v3Bytes": 534015,
+      "v4Bytes": 534015,
+      "encodedSHA256": "b73c17cc3d0d026bc528ef57b70395d98d353ccba3758ef32ac8e1dece998032",
+      "exact": true,
+      "gzipEncodeMs": 16.12140005454421,
+      "v3EncodeMs": 411.46269999444485,
+      "v4EncodeMs": 438.74759995378554,
+      "v4DecodeMs": 4.990400047972798,
+      "modes": {
+        "raw": 1025,
+        "repeat": 11,
+        "patch": 1013
+      },
+      "periodicRuns": 1024,
+      "exceptions": 0,
+      "runSample": [
+        [
+          1,
+          512,
+          25,
+          "repeat",
+          0
+        ],
+        [
+          1025,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          2049,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          3073,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          4097,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          5121,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          6145,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          7169,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          8193,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          9217,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          10241,
+          512,
+          25,
+          "patch",
+          0
+        ],
+        [
+          11265,
+          512,
+          25,
+          "patch",
+          0
+        ]
+      ]
+    },
+    {
+      "case": "shifted-251",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "76db7774d3a3a58305594c5581175d1370258e215a2209e966843007c3591e22",
+      "gzipBytes": 527893,
+      "v3Bytes": 524443,
+      "v4Bytes": 524443,
+      "encodedSHA256": "5710ee08edf9f4c82fa7736ad45aaf8042d36c80a7acaa925f1507dd69443cea",
+      "exact": true,
+      "gzipEncodeMs": 14.087900053709745,
+      "v3EncodeMs": 384.4846000429243,
+      "v4EncodeMs": 382.68610020168126,
+      "v4DecodeMs": 1.757799880579114,
+      "modes": {
+        "raw": 9,
+        "repeat": 1,
+        "patch": 7
+      },
+      "periodicRuns": 8,
+      "exceptions": 0,
+      "runSample": [
+        [
+          251,
+          65536,
+          25,
+          "repeat",
+          0
+        ],
+        [
+          131323,
+          65536,
+          25,
+          "patch",
+          0
+        ],
+        [
+          262395,
+          65536,
+          25,
+          "patch",
+          0
+        ],
+        [
+          393467,
+          65536,
+          25,
+          "patch",
+          0
+        ],
+        [
+          524539,
+          65536,
+          25,
+          "patch",
+          0
+        ],
+        [
+          655611,
+          65536,
+          25,
+          "patch",
+          0
+        ],
+        [
+          786683,
+          65536,
+          25,
+          "patch",
+          0
+        ],
+        [
+          917755,
+          65536,
+          25,
+          "patch",
+          0
+        ]
+      ]
+    },
+    {
+      "case": "irregular-20261131",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "72b66854876c0479f81edb206da0ac0377b44060a41a1e13e59599d3d6c70d49",
+      "gzipBytes": 535410,
+      "v3Bytes": 530919,
+      "v4Bytes": 530919,
+      "encodedSHA256": "9ff1479c18ad1895a2668b5d3eed28432815b81b4c011df450c432cd4c2d91fd",
+      "exact": true,
+      "gzipEncodeMs": 16.167100053280592,
+      "v3EncodeMs": 299.59820001386106,
+      "v4EncodeMs": 307.4256998952478,
+      "v4DecodeMs": 2.1029000636190176,
+      "modes": {
+        "raw": 123,
+        "repeat": 122
+      },
+      "periodicRuns": 122,
+      "exceptions": 0,
+      "runSample": [
+        [
+          137,
+          1592,
+          37,
+          "repeat",
+          0
+        ],
+        [
+          7427,
+          6471,
+          7,
+          "repeat",
+          0
+        ],
+        [
+          17656,
+          320,
+          19,
+          "repeat",
+          0
+        ],
+        [
+          26677,
+          5763,
+          61,
+          "repeat",
+          0
+        ],
+        [
+          36132,
+          730,
+          3,
+          "repeat",
+          0
+        ],
+        [
+          42656,
+          1180,
+          37,
+          "repeat",
+          0
+        ],
+        [
+          44962,
+          1101,
+          3,
+          "repeat",
+          0
+        ],
+        [
+          48571,
+          1854,
+          19,
+          "repeat",
+          0
+        ],
+        [
+          53127,
+          1866,
+          128,
+          "repeat",
+          0
+        ],
+        [
+          61633,
+          3258,
+          127,
+          "repeat",
+          0
+        ],
+        [
+          65906,
+          6204,
+          19,
+          "repeat",
+          0
+        ],
+        [
+          74714,
+          2808,
+          61,
+          "repeat",
+          0
+        ]
+      ]
+    },
+    {
+      "case": "irregular-20261132",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "054af9d34104989ece8720239ab09c0e78d377d8546394abdf9c6a8a1dfb4843",
+      "gzipBytes": 532030,
+      "v3Bytes": 527544,
+      "v4Bytes": 527544,
+      "encodedSHA256": "f670400efdbb1ca44954e3226ea62ceb7ae1f9105556e11f21a33acd4f4b25c3",
+      "exact": true,
+      "gzipEncodeMs": 15.819299966096878,
+      "v3EncodeMs": 306.9186001084745,
+      "v4EncodeMs": 309.8287000320852,
+      "v4DecodeMs": 2.3769999388605356,
+      "modes": {
+        "raw": 124,
+        "repeat": 123
+      },
+      "periodicRuns": 123,
+      "exceptions": 0,
+      "runSample": [
+        [
+          137,
+          6013,
+          19,
+          "repeat",
+          0
+        ],
+        [
+          8723,
+          5018,
+          19,
+          "repeat",
+          0
+        ],
+        [
+          17698,
+          5490,
+          19,
+          "repeat",
+          0
+        ],
+        [
+          31345,
+          983,
+          127,
+          "repeat",
+          0
+        ],
+        [
+          33304,
+          5200,
+          128,
+          "repeat",
+          0
+        ],
+        [
+          39393,
+          2763,
+          19,
+          "repeat",
+          0
+        ],
+        [
+          43782,
+          1058,
+          7,
+          "repeat",
+          0
+        ],
+        [
+          46528,
+          8748,
+          37,
+          "repeat",
+          0
+        ],
+        [
+          56968,
+          2719,
+          37,
+          "repeat",
+          0
+        ],
+        [
+          67125,
+          3594,
+          37,
+          "repeat",
+          0
+        ],
+        [
+          75783,
+          6410,
+          127,
+          "repeat",
+          0
+        ],
+        [
+          87915,
+          3342,
+          37,
+          "repeat",
+          0
+        ]
+      ]
+    },
+    {
+      "case": "irregular-20261133",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "56ee5e806a93f6324728e4536a1ac7ab76710416e5c6c710e5113de6eefb24d3",
+      "gzipBytes": 519226,
+      "v3Bytes": 514616,
+      "v4Bytes": 514616,
+      "encodedSHA256": "fd875fdb95e677d68c7d312eb19b63d7706d7ec7d0a5c8096859b0bbe57f7fda",
+      "exact": true,
+      "gzipEncodeMs": 15.64300013706088,
+      "v3EncodeMs": 301.48699996061623,
+      "v4EncodeMs": 300.560399889946,
+      "v4DecodeMs": 2.0264999475330114,
+      "modes": {
+        "raw": 120,
+        "repeat": 119
+      },
+      "periodicRuns": 119,
+      "exceptions": 0,
+      "runSample": [
+        [
+          137,
+          1489,
+          128,
+          "repeat",
+          0
+        ],
+        [
+          8253,
+          4985,
+          3,
+          "repeat",
+          0
+        ],
+        [
+          19726,
+          5455,
+          7,
+          "repeat",
+          0
+        ],
+        [
+          28727,
+          1987,
+          127,
+          "repeat",
+          0
+        ],
+        [
+          36735,
+          4290,
+          127,
+          "repeat",
+          0
+        ],
+        [
+          44666,
+          393,
+          61,
+          "repeat",
+          0
+        ],
+        [
+          49263,
+          7972,
+          128,
+          "repeat",
+          0
+        ],
+        [
+          62324,
+          846,
+          3,
+          "repeat",
+          0
+        ],
+        [
+          71670,
+          5423,
+          127,
+          "repeat",
+          0
+        ],
+        [
+          77268,
+          4674,
+          7,
+          "repeat",
+          0
+        ],
+        [
+          84492,
+          2213,
+          3,
+          "repeat",
+          0
+        ],
+        [
+          88035,
+          7638,
+          128,
+          "repeat",
+          0
+        ]
+      ]
+    },
+    {
+      "case": "changing-motif",
+      "sourceBytes": 887202,
+      "sourceSHA256": "cbc78c5f4ea4115af40b7ab778b800759666bb0d748f83080555658b9279c7d1",
+      "gzipBytes": 252448,
+      "v3Bytes": 247475,
+      "v4Bytes": 247475,
+      "encodedSHA256": "93780bd44d8f56a48a2464f6f4cd7971c5794745fcb4368a46fa2075168b9da4",
+      "exact": true,
+      "gzipEncodeMs": 8.677700068801641,
+      "v3EncodeMs": 164.749100105837,
+      "v4EncodeMs": 159.74800009280443,
+      "v4DecodeMs": 1.9453000277280807,
+      "modes": {
+        "raw": 171,
+        "repeat": 1,
+        "patch": 169
+      },
+      "periodicRuns": 170,
+      "exceptions": 0,
+      "runSample": [
+        [
+          53,
+          3396,
+          37,
+          "repeat",
+          0
+        ],
+        [
+          4717,
+          5084,
+          37,
+          "patch",
+          0
+        ],
+        [
+          11625,
+          2824,
+          37,
+          "patch",
+          0
+        ],
+        [
+          15499,
+          6649,
+          37,
+          "patch",
+          0
+        ],
+        [
+          23132,
+          1259,
+          37,
+          "patch",
+          0
+        ],
+        [
+          27242,
+          2590,
+          37,
+          "patch",
+          0
+        ],
+        [
+          32016,
+          4061,
+          37,
+          "patch",
+          0
+        ],
+        [
+          37488,
+          797,
+          37,
+          "patch",
+          0
+        ],
+        [
+          40732,
+          4101,
+          37,
+          "patch",
+          0
+        ],
+        [
+          47380,
+          4248,
+          37,
+          "patch",
+          0
+        ],
+        [
+          52903,
+          6996,
+          37,
+          "patch",
+          0
+        ],
+        [
+          61325,
+          4043,
+          37,
+          "patch",
+          0
+        ]
+      ]
+    },
+    {
+      "case": "sparse-defects",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "3c36344b07c4e9ce2843cd62819f449cc7587f9eec5b6868d147ca0707363146",
+      "gzipBytes": 5731,
+      "v3Bytes": 15397,
+      "v4Bytes": 3129,
+      "encodedSHA256": "8af5b6b6b90baf91c5fc66629831a445baf2a5521cc7af91bc9766190baae906",
+      "exact": true,
+      "gzipEncodeMs": 5.365600110962987,
+      "v3EncodeMs": 29.986499808728695,
+      "v4EncodeMs": 16.265899874269962,
+      "v4DecodeMs": 2.151399850845337,
+      "modes": {
+        "raw": 1,
+        "exception": 1
+      },
+      "periodicRuns": 1,
+      "exceptions": 1023,
+      "runSample": [
+        [
+          1,
+          1048575,
+          8,
+          "exception",
+          1023
+        ]
+      ]
+    },
+    {
+      "case": "random-1MiB",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "d3cc80f2e062094e9d161ffc51e71d96560a9d5a1c4712ab47e67d950f5e5d11",
+      "gzipBytes": 1048914,
+      "v3Bytes": 1048621,
+      "v4Bytes": 1048621,
+      "encodedSHA256": "a5620e1638e754b64c8be4c2e295d04d28e90e992d0e8653b9ab4b2b2c86c2dd",
+      "exact": true,
+      "gzipEncodeMs": 23.483899887651205,
+      "v3EncodeMs": 572.8953001089394,
+      "v4EncodeMs": 575.7353999651968,
+      "v4DecodeMs": 1.0658998508006334,
+      "modes": {
+        "raw": 1
+      },
+      "periodicRuns": 0,
+      "exceptions": 0,
+      "runSample": []
+    },
+    {
+      "case": "repeat-1MiB",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "3fa83f5be6609365a03513492630a10994adb31ef8368a140baff907b02cb92e",
+      "gzipBytes": 2595,
+      "v3Bytes": 64,
+      "v4Bytes": 64,
+      "encodedSHA256": "9fe8440e762957ca876b34acbb287d258a0648b3e3d797568d2d2b6da1ee5653",
+      "exact": true,
+      "gzipEncodeMs": 4.74989996291697,
+      "v3EncodeMs": 9.542099898681045,
+      "v4EncodeMs": 9.306800086051226,
+      "v4DecodeMs": 1.2852998916059732,
+      "modes": {
+        "repeat": 1
+      },
+      "periodicRuns": 1,
+      "exceptions": 0,
+      "runSample": [
+        [
+          0,
+          1048576,
+          18,
+          "repeat",
+          0
+        ]
+      ]
+    },
+    {
+      "case": "source-code",
+      "sourceBytes": 27929,
+      "sourceSHA256": "0015270627397b1b96786315b693dfe481bf601a35c478b044bd9ae8c14300e9",
+      "gzipBytes": 8116,
+      "v3Bytes": 27307,
+      "v4Bytes": 27307,
+      "encodedSHA256": "5f7aeee67151041cc4db423e358f07e5231ec828b5b24d7018e9ee6becf14e7c",
+      "exact": true,
+      "gzipEncodeMs": 0.6515001878142357,
+      "v3EncodeMs": 62.28410010226071,
+      "v4EncodeMs": 61.86500005424023,
+      "v4DecodeMs": 0.9616999886929989,
+      "modes": {
+        "token": 1
+      },
+      "periodicRuns": 0,
+      "exceptions": 0,
+      "runSample": []
+    },
+    {
+      "case": "odd-length",
+      "sourceBytes": 65537,
+      "sourceSHA256": "07a187472e3b2fd56ec31202e7c6eda9eb97690e9a80495fb9efa3326be72bb9",
+      "gzipBytes": 65575,
+      "v3Bytes": 65582,
+      "v4Bytes": 65582,
+      "encodedSHA256": "bbded4b12ccc6b540214490b9e010e03eac8285ddc70969e8c07e34b7023ccbb",
+      "exact": true,
+      "gzipEncodeMs": 1.2699998915195465,
+      "v3EncodeMs": 35.21170001477003,
+      "v4EncodeMs": 36.00099985487759,
+      "v4DecodeMs": 0.0646000262349844,
+      "modes": {
+        "raw": 1
+      },
+      "periodicRuns": 0,
+      "exceptions": 0,
+      "runSample": []
+    },
+    {
+      "case": "empty",
+      "sourceBytes": 0,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gzipBytes": 20,
+      "v3Bytes": 39,
+      "v4Bytes": 39,
+      "encodedSHA256": "4e79eb534a400b8dfa2b2ae91db33347d2212baddd41140244c501099f9e1897",
+      "exact": true,
+      "gzipEncodeMs": 0.03210012800991535,
+      "v3EncodeMs": 0.013999873772263527,
+      "v4EncodeMs": 0.003400025889277458,
+      "v4DecodeMs": 0.003200024366378784,
+      "modes": {},
+      "periodicRuns": 0,
+      "exceptions": 0,
+      "runSample": []
+    },
+    {
+      "case": "short",
+      "sourceBytes": 3,
+      "sourceSHA256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+      "gzipBytes": 23,
+      "v3Bytes": 44,
+      "v4Bytes": 44,
+      "encodedSHA256": "f2f984a1806209207f87be7f70f8eb7f59c554c6cd40743b1c26639bf0748fbf",
+      "exact": true,
+      "gzipEncodeMs": 0.008200062438845634,
+      "v3EncodeMs": 0.028399983420968056,
+      "v4EncodeMs": 0.01750001683831215,
+      "v4DecodeMs": 0.004400033503770828,
+      "modes": {
+        "raw": 1
+      },
+      "periodicRuns": 0,
+      "exceptions": 0,
+      "runSample": []
+    }
+  ],
+  "extraRows": [
+    {
+      "case": "defects-every-16",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "cc07c5a38ffcf1de45b2aa2a92e2b572364ecefff25fe96126f4ec3d7cbd4397",
+      "gzipBytes": 124454,
+      "v3Bytes": 1035347,
+      "v4Bytes": 131058,
+      "encodedSHA256": "eb05e048e553e46610699982a4d229c2aeea4502a4d3d976f800ad21d297445d",
+      "exact": true,
+      "gzipEncodeMs": 18.805500119924545,
+      "v3EncodeMs": 8323.025799822062,
+      "v4EncodeMs": 200.9206002112478,
+      "v4DecodeMs": 33.14159996807575,
+      "modes": {
+        "raw": 1,
+        "exception": 1
+      },
+      "periodicRuns": 1,
+      "exceptions": 65238,
+      "runSample": [
+        [
+          513,
+          1048063,
+          16,
+          "exception",
+          65238
+        ]
+      ]
+    },
+    {
+      "case": "defects-every-64",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "1f903e5330f3ab16c55a11ecdd673e9c31cab75c4e3a21c617c0c43a4b87905b",
+      "gzipBytes": 38944,
+      "v3Bytes": 102401,
+      "v4Bytes": 32702,
+      "encodedSHA256": "ed4fcb84e8aa9dacdde1ac23603dd6f7a3597a2c6f00d464a02a7a72ed84ee0f",
+      "exact": true,
+      "gzipEncodeMs": 6.902699824422598,
+      "v3EncodeMs": 713.1411000154912,
+      "v4EncodeMs": 56.71910010278225,
+      "v4DecodeMs": 9.647599887102842,
+      "modes": {
+        "raw": 1,
+        "exception": 1
+      },
+      "periodicRuns": 1,
+      "exceptions": 16321,
+      "runSample": [
+        [
+          1,
+          1048575,
+          8,
+          "exception",
+          16321
+        ]
+      ]
+    },
+    {
+      "case": "defects-every-256",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "0ddbca5a2ee8fb1cda028f60e06331b7d8b1c2dab7f6cd5378cc18b9cdee8573",
+      "gzipBytes": 15230,
+      "v3Bytes": 28581,
+      "v4Bytes": 12285,
+      "encodedSHA256": "1e77303efde7362f9e84bce49676e84a1c2782e075ee75c5039606ba6fc71e72",
+      "exact": true,
+      "gzipEncodeMs": 6.251000100746751,
+      "v3EncodeMs": 287.967000156641,
+      "v4EncodeMs": 26.675399858504534,
+      "v4DecodeMs": 4.545900039374828,
+      "modes": {
+        "raw": 1,
+        "exception": 1
+      },
+      "periodicRuns": 1,
+      "exceptions": 4075,
+      "runSample": [
+        [
+          1,
+          1048575,
+          8,
+          "exception",
+          4075
+        ]
+      ]
+    },
+    {
+      "case": "defects-every-4096",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "d290feaa28fb80a2b7ba46240039be70825fae7761afe28200e6b5fb97b6bd8f",
+      "gzipBytes": 2647,
+      "v3Bytes": 1841,
+      "v4Bytes": 825,
+      "encodedSHA256": "d3a14d0ea594ea6525ec2ea8d13041a8cb3b19a5cc475ee5de15c00777e6567e",
+      "exact": true,
+      "gzipEncodeMs": 4.884199937805533,
+      "v3EncodeMs": 15.348799992352724,
+      "v4EncodeMs": 12.079000007361174,
+      "v4DecodeMs": 1.9990999717265368,
+      "modes": {
+        "raw": 1,
+        "exception": 1
+      },
+      "periodicRuns": 1,
+      "exceptions": 255,
+      "runSample": [
+        [
+          1,
+          1048575,
+          8,
+          "exception",
+          255
+        ]
+      ]
+    },
+    {
+      "case": "defects-period-37",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "ba056444020fa545df34dda8c5970f4f5c987e6cd203acc3b2968752e8dec020",
+      "gzipBytes": 7174,
+      "v3Bytes": 44976,
+      "v4Bytes": 3152,
+      "encodedSHA256": "0f768edc2f7137d888808e01d917145836dd9b1330670aa4a235f9713ed94155",
+      "exact": true,
+      "gzipEncodeMs": 5.1009999588131905,
+      "v3EncodeMs": 73.78500001505017,
+      "v4EncodeMs": 55.093699833378196,
+      "v4DecodeMs": 2.8075999580323696,
+      "modes": {
+        "raw": 1,
+        "exception": 1
+      },
+      "periodicRuns": 1,
+      "exceptions": 1021,
+      "runSample": [
+        [
+          1,
+          1048575,
+          37,
+          "exception",
+          1021
+        ]
+      ]
+    },
+    {
+      "case": "bursts-16-every-4096",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "816b7d386736fe69ebf02d7272afe2d1c3c7af2f80b1f35f76289679d1f381eb",
+      "gzipBytes": 7129,
+      "v3Bytes": 5681,
+      "v4Bytes": 5681,
+      "encodedSHA256": "1207d2a399ed7168e4d0e355c288b78faef3fb4d9e01bd2edf3244673452543f",
+      "exact": true,
+      "gzipEncodeMs": 6.711299996823072,
+      "v3EncodeMs": 18.867699895054102,
+      "v4EncodeMs": 23.49089994095266,
+      "v4DecodeMs": 3.5874999593943357,
+      "modes": {
+        "raw": 256,
+        "repeat": 1,
+        "patch": 255
+      },
+      "periodicRuns": 256,
+      "exceptions": 0,
+      "runSample": [
+        [
+          16,
+          4080,
+          8,
+          "repeat",
+          0
+        ],
+        [
+          4112,
+          4080,
+          8,
+          "patch",
+          0
+        ],
+        [
+          8208,
+          4080,
+          8,
+          "patch",
+          0
+        ],
+        [
+          12304,
+          4080,
+          8,
+          "patch",
+          0
+        ],
+        [
+          16400,
+          4080,
+          8,
+          "patch",
+          0
+        ],
+        [
+          20496,
+          4080,
+          8,
+          "patch",
+          0
+        ],
+        [
+          24592,
+          4080,
+          8,
+          "patch",
+          0
+        ],
+        [
+          28688,
+          4080,
+          8,
+          "patch",
+          0
+        ],
+        [
+          32784,
+          4080,
+          8,
+          "patch",
+          0
+        ],
+        [
+          36880,
+          4080,
+          8,
+          "patch",
+          0
+        ],
+        [
+          40976,
+          4080,
+          8,
+          "patch",
+          0
+        ],
+        [
+          45072,
+          4080,
+          8,
+          "patch",
+          0
+        ]
+      ]
+    },
+    {
+      "case": "bursts-256-every-4096",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "802821c935da9cbf81e384535a825a444ca39247766118ed52d1fd8ff714861e",
+      "gzipBytes": 70577,
+      "v3Bytes": 67422,
+      "v4Bytes": 67422,
+      "encodedSHA256": "c1fd23cb3526e5a98ef7a3773d278e712768f956cb0b9ca7bd94bc267946ce1b",
+      "exact": true,
+      "gzipEncodeMs": 6.352199940010905,
+      "v3EncodeMs": 64.86940011382103,
+      "v4EncodeMs": 63.55289998464286,
+      "v4DecodeMs": 3.154000034555793,
+      "modes": {
+        "raw": 256,
+        "repeat": 7,
+        "patch": 249
+      },
+      "periodicRuns": 256,
+      "exceptions": 0,
+      "runSample": [
+        [
+          256,
+          3840,
+          8,
+          "repeat",
+          0
+        ],
+        [
+          4352,
+          3840,
+          8,
+          "patch",
+          0
+        ],
+        [
+          8448,
+          3840,
+          8,
+          "patch",
+          0
+        ],
+        [
+          12544,
+          3840,
+          8,
+          "patch",
+          0
+        ],
+        [
+          16640,
+          3840,
+          8,
+          "patch",
+          0
+        ],
+        [
+          20736,
+          3840,
+          8,
+          "patch",
+          0
+        ],
+        [
+          24832,
+          3840,
+          8,
+          "patch",
+          0
+        ],
+        [
+          28928,
+          3840,
+          8,
+          "patch",
+          0
+        ],
+        [
+          33024,
+          3840,
+          8,
+          "patch",
+          0
+        ],
+        [
+          37120,
+          3840,
+          8,
+          "patch",
+          0
+        ],
+        [
+          41216,
+          3840,
+          8,
+          "patch",
+          0
+        ],
+        [
+          45312,
+          3840,
+          8,
+          "patch",
+          0
+        ]
+      ]
+    },
+    {
+      "case": "log-lines",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "306e11cc502c21f5824fdbc9b9f4fd18930f580b051b443ee36b6761a699af3e",
+      "gzipBytes": 73713,
+      "v3Bytes": 1048621,
+      "v4Bytes": 1048621,
+      "encodedSHA256": "5f19b7311fa6255bc1a2143dfe38da3c6b158340993777ea4298d57c43d0a355",
+      "exact": true,
+      "gzipEncodeMs": 12.286999961361289,
+      "v3EncodeMs": 3224.5802998077124,
+      "v4EncodeMs": 3217.624100157991,
+      "v4DecodeMs": 1.2171000707894564,
+      "modes": {
+        "raw": 1
+      },
+      "periodicRuns": 0,
+      "exceptions": 0,
+      "runSample": []
+    }
+  ]
+}

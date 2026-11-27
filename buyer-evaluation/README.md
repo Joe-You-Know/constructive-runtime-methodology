@@ -36,3 +36,20 @@ Measured local trial fixtures (bytes; all applicable round trips exact):
 | Seeded random | 65,536 | 65,574 | 65,618 | Not applicable |
 
 30 inherited original codec tests passed; 3 bounded trial test groups passed. These are seller-run, local research measurements, not independent buyer results.
+
+## Experimental CRTG4: constructive runs with exceptions
+
+`grammar_v4.py` keeps a periodic run alive through contradicting bytes and records them as explicit exceptions (zero-based offsets stored as gaps, plus replacement bytes) instead of ending the run. Discovery, literal, repeat and patch commands are unchanged from CRTG3. A run stops absorbing exceptions when its gain falls 32 bytes below the best seen, when a burst is cheaper as a restart, or when the same exception recurs at the same phase (the unit itself changed).
+
+Place `grammar_v2.py`, `grammar_v3.py`, `benchmark_v3.py`, `grammar_v4.py` and `benchmark_v4.py` next to the extracted trial (`trial.py`, `crcodec/`), then run `python benchmark_v4.py`. Results: `grammar_v4_report_20261127.json`.
+
+Selected results (bytes; gzip-6 / CRTG3 / CRTG4):
+
+| Workload | gzip-6 | CRTG3 | CRTG4 |
+|---|---:|---:|---:|
+| Sparse defects (1 MiB, 1 defect per 1,021 B) | 5,731 | 15,397 | 3,129 |
+| Defect every 64 B | 38,944 | 102,401 | 32,702 |
+| Defect every 16 B | 124,454 | 1,035,347 | 131,058 |
+| Log lines with counters | 73,713 | 1,048,621 | 1,048,621 |
+
+CRTG4 is no larger than CRTG3 on any of the 23 primary workloads and is smaller than gzip-6 on 19 of them (CRTG3: 18). gzip-6 still wins on source code, an odd-length random input, empty and short inputs, dense defects (every 16 B) and log lines, where no exact period is discovered and the encoder spends about 3 s searching. 281/281 round trips exact (23 primary, 8 additional, 250 randomized); 124/124 negative controls rejected. The stopping rules and the 8 additional workloads were designed after inspecting CRTG3/CRTG4 behaviour. Single developer-run measurements on one machine; not independent validation and not the commercial runtime.
