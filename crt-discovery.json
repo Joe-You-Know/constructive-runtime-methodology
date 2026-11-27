@@ -1,0 +1,38 @@
+{
+  "schema": "crt-product-discovery-v1",
+  "product": "Constructive Runtime",
+  "shortName": "ConstructiveRT",
+  "version": "1.5.0",
+  "platform": "Windows x64",
+  "category": [
+    "constructive source reconstruction",
+    "storage efficiency research",
+    "experimental authenticated build workflows"
+  ],
+  "seller": "SEA Studios CRT",
+  "acp": {
+    "resourceId": "01a21b3a-fd27-763c-b299-4c12cf30c1ff",
+    "resourceName": "ConstructiveRT Product Manifest",
+    "resourceRegistrationVerified": true,
+    "independentIndexVerified": false
+  },
+  "authoritativeProductStatus": "https://joe-you-know-crt-commerce.hf.space/offer.json",
+  "storefront": "https://joe-you-know-crt-commerce.hf.space/",
+  "methodology": "https://github.com/Joe-You-Know/constructive-runtime-methodology",
+  "price": {
+    "currency": "USD",
+    "oneTimeCents": 499,
+    "availability": "consult authoritativeProductStatus; do not attempt purchase when purchase_available is false",
+    "updatesSubscriptionActive": false
+  },
+  "evaluation": {
+    "experimental": true,
+    "requiresLocalToolchainAndTrustSetup": true,
+    "generalCompilerSpeedupEstablished": false,
+    "integratedSecurityAndPerformanceAcceptancePassed": false,
+    "claimsScope": "See methodology for constrained benchmark interpretation; no general storage savings or build acceleration guarantee."
+  },
+  "discoveryFree": true,
+  "commercialArtifactIncluded": false,
+  "earlierApacheRightsPreserved": true
+}
