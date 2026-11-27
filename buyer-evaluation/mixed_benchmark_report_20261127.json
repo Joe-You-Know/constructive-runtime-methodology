@@ -1,0 +1,481 @@
+{
+  "schema": "crt-mixed-workload-v1",
+  "trialSHA256": "192740a5b119e02bf3b1fc991124c90564857dc7a3e0095eac3a79eab2ba7905",
+  "python": "3.12.16 (main, Nov 24 2026, 07:52:27) [GCC 14.2.0]",
+  "platform": "Linux-6.12.115-140.210.amzn2023.x86_64-x86_64-with-glibc2.41",
+  "repetitions": 3,
+  "sourceBytes": 1048576,
+  "seeds": [
+    20261127,
+    20261128,
+    20261129
+  ],
+  "blockSizes": [
+    512,
+    4096,
+    65536
+  ],
+  "timingScope": "published trial: local writes and fsync, fixed codec order, not transport; excludes generation",
+  "commercialRuntimeEvaluated": false,
+  "rows": [
+    {
+      "blockBytes": 512,
+      "seed": 20261127,
+      "codec": "gzip-6",
+      "sourceBytes": 1048576,
+      "sourceSha256": "921d5c96ea9d15760e949ea40006428051b970b4fa8bb2e432031fd122097adf",
+      "encodedBytes": 536849,
+      "encodedSha256": "4494a6f1692e5d53cb43e798f278e811a3040b81ecf150b34038ec64fd39123b",
+      "exact": true,
+      "encodeMsMedian": 19.960747100412846,
+      "decodeMsMedian": 8.094520075246692,
+      "encodeMsAll": [
+        19.764310913160443,
+        19.960747100412846,
+        20.09138697758317
+      ],
+      "decodeMsAll": [
+        8.094520075246692,
+        7.867302978411317,
+        8.11497203540057
+      ]
+    },
+    {
+      "blockBytes": 512,
+      "seed": 20261127,
+      "codec": "CRTCG1",
+      "sourceBytes": 1048576,
+      "sourceSha256": "921d5c96ea9d15760e949ea40006428051b970b4fa8bb2e432031fd122097adf",
+      "encodedBytes": 833977,
+      "encodedSha256": "005904c5aa57feb1f848545051b4c8f638a5ecfd67ff337c0192ebf14ec7fab0",
+      "exact": true,
+      "encodeMsMedian": 164.69926002901047,
+      "decodeMsMedian": 72.38013402093202,
+      "encodeMsAll": [
+        169.87599898129702,
+        164.69926002901047,
+        147.0379529055208
+      ],
+      "decodeMsAll": [
+        80.91609796974808,
+        72.38013402093202,
+        71.90726196859032
+      ]
+    },
+    {
+      "blockBytes": 512,
+      "seed": 20261127,
+      "codec": "CRTC1-zlib6",
+      "applicable": false,
+      "reason": "bad shell 1 start or absent seam"
+    },
+    {
+      "blockBytes": 512,
+      "seed": 20261128,
+      "codec": "gzip-6",
+      "sourceBytes": 1048576,
+      "sourceSha256": "5a6b8c186d7c6f4b9a791d1d8e4d3ec4b0b0399ae35ccca3b08bde9fff9303cf",
+      "encodedBytes": 536859,
+      "encodedSha256": "93aa9b389d501407205f33eb873c11ab3f80d714e292e2b0131dc4ea1a130c60",
+      "exact": true,
+      "encodeMsMedian": 21.077580051496625,
+      "decodeMsMedian": 9.954205015674233,
+      "encodeMsAll": [
+        21.02391899097711,
+        21.077580051496625,
+        21.775866975076497
+      ],
+      "decodeMsAll": [
+        10.324383969418705,
+        9.154248982667923,
+        9.954205015674233
+      ]
+    },
+    {
+      "blockBytes": 512,
+      "seed": 20261128,
+      "codec": "CRTCG1",
+      "sourceBytes": 1048576,
+      "sourceSha256": "5a6b8c186d7c6f4b9a791d1d8e4d3ec4b0b0399ae35ccca3b08bde9fff9303cf",
+      "encodedBytes": 833901,
+      "encodedSha256": "ecc775c664acfdee211b5f70e9f7a20098bd0728fca8e9ec388336ccfe751dcd",
+      "exact": true,
+      "encodeMsMedian": 158.49356597755104,
+      "decodeMsMedian": 83.22656096424907,
+      "encodeMsAll": [
+        146.69458393473178,
+        180.96978403627872,
+        158.49356597755104
+      ],
+      "decodeMsAll": [
+        84.66588205192238,
+        74.26556304562837,
+        83.22656096424907
+      ]
+    },
+    {
+      "blockBytes": 512,
+      "seed": 20261128,
+      "codec": "CRTC1-zlib6",
+      "applicable": false,
+      "reason": "bad shell 1 start or absent seam"
+    },
+    {
+      "blockBytes": 512,
+      "seed": 20261129,
+      "codec": "gzip-6",
+      "sourceBytes": 1048576,
+      "sourceSha256": "a5ac5fb8370c1c8e4f384b160d6978a6adf4a6973f298ce25a5d5c6899efc229",
+      "encodedBytes": 536856,
+      "encodedSha256": "ece4c470d954cbb43a3c67d3a24851b6a9f43a6e0b314d5c826ab39448d175ea",
+      "exact": true,
+      "encodeMsMedian": 22.18314609490335,
+      "decodeMsMedian": 7.667545927688479,
+      "encodeMsAll": [
+        26.719545014202595,
+        22.18314609490335,
+        20.41497000027448
+      ],
+      "decodeMsAll": [
+        7.667545927688479,
+        7.611786015331745,
+        9.056022972799838
+      ]
+    },
+    {
+      "blockBytes": 512,
+      "seed": 20261129,
+      "codec": "CRTCG1",
+      "sourceBytes": 1048576,
+      "sourceSha256": "a5ac5fb8370c1c8e4f384b160d6978a6adf4a6973f298ce25a5d5c6899efc229",
+      "encodedBytes": 834143,
+      "encodedSha256": "c0b03aa0b7ef2ad17fc3f28207ed65e11114d7e9f6fa21096eee932931e2c883",
+      "exact": true,
+      "encodeMsMedian": 152.4604259757325,
+      "decodeMsMedian": 78.48327106330544,
+      "encodeMsAll": [
+        152.4604259757325,
+        142.11143797729164,
+        183.75525099691004
+      ],
+      "decodeMsAll": [
+        73.21070600301027,
+        78.48327106330544,
+        87.43960794527084
+      ]
+    },
+    {
+      "blockBytes": 512,
+      "seed": 20261129,
+      "codec": "CRTC1-zlib6",
+      "applicable": false,
+      "reason": "bad shell 1 start or absent seam"
+    },
+    {
+      "blockBytes": 4096,
+      "seed": 20261127,
+      "codec": "gzip-6",
+      "sourceBytes": 1048576,
+      "sourceSha256": "f67ea20894348c717a8edb03c2f62cf2d6f5e7b7e22ed94c536816d959a9504e",
+      "encodedBytes": 530379,
+      "encodedSha256": "3ba0bdd66cb00bfb3c85cc58cf10639ea1f113be5de4e78ae5b2a960d5afbac1",
+      "exact": true,
+      "encodeMsMedian": 20.82095295190811,
+      "decodeMsMedian": 8.146028965711594,
+      "encodeMsAll": [
+        20.82095295190811,
+        18.910498009063303,
+        23.184341029264033
+      ],
+      "decodeMsAll": [
+        8.66942701395601,
+        8.146028965711594,
+        8.135951007716358
+      ]
+    },
+    {
+      "blockBytes": 4096,
+      "seed": 20261127,
+      "codec": "CRTCG1",
+      "sourceBytes": 1048576,
+      "sourceSha256": "f67ea20894348c717a8edb03c2f62cf2d6f5e7b7e22ed94c536816d959a9504e",
+      "encodedBytes": 740035,
+      "encodedSha256": "f2732c2eadb4d8cbd0c616cf2422e085ab9740ddb993f363d4de9f5a4ae82129",
+      "exact": true,
+      "encodeMsMedian": 144.03629302978516,
+      "decodeMsMedian": 63.55163000989705,
+      "encodeMsAll": [
+        150.2696800744161,
+        144.03629302978516,
+        141.65695803239942
+      ],
+      "decodeMsAll": [
+        64.6821919362992,
+        63.55163000989705,
+        62.29204998817295
+      ]
+    },
+    {
+      "blockBytes": 4096,
+      "seed": 20261127,
+      "codec": "CRTC1-zlib6",
+      "applicable": false,
+      "reason": "bad shell 1 start or absent seam"
+    },
+    {
+      "blockBytes": 4096,
+      "seed": 20261128,
+      "codec": "gzip-6",
+      "sourceBytes": 1048576,
+      "sourceSha256": "a4506209c1184827b432075d042a2f97d9b3c0b2f44454acb7e12197bffeb56d",
+      "encodedBytes": 530363,
+      "encodedSha256": "ca24051d5560b4d4d37c6f826422dd2d3eb592dd24c5df7149471c1257e5a717",
+      "exact": true,
+      "encodeMsMedian": 20.580247975885868,
+      "decodeMsMedian": 7.626735954545438,
+      "encodeMsAll": [
+        19.064869033172727,
+        20.580247975885868,
+        23.650435963645577
+      ],
+      "decodeMsAll": [
+        8.014480001293123,
+        7.626735954545438,
+        7.30791303794831
+      ]
+    },
+    {
+      "blockBytes": 4096,
+      "seed": 20261128,
+      "codec": "CRTCG1",
+      "sourceBytes": 1048576,
+      "sourceSha256": "a4506209c1184827b432075d042a2f97d9b3c0b2f44454acb7e12197bffeb56d",
+      "encodedBytes": 739990,
+      "encodedSha256": "129e403c18d029e3f81379b7e30219d6e0ad233370a115a1e1954e99ffff7b18",
+      "exact": true,
+      "encodeMsMedian": 142.35547091811895,
+      "decodeMsMedian": 62.814036034978926,
+      "encodeMsAll": [
+        142.35547091811895,
+        137.4324179487303,
+        156.02105599828064
+      ],
+      "decodeMsAll": [
+        62.01423692982644,
+        68.81547602824867,
+        62.814036034978926
+      ]
+    },
+    {
+      "blockBytes": 4096,
+      "seed": 20261128,
+      "codec": "CRTC1-zlib6",
+      "applicable": false,
+      "reason": "bad shell 1 start or absent seam"
+    },
+    {
+      "blockBytes": 4096,
+      "seed": 20261129,
+      "codec": "gzip-6",
+      "sourceBytes": 1048576,
+      "sourceSha256": "b82a02ec534e1a8d93071e636036fabf053132e50ebdf7a34d64def66a0dac26",
+      "encodedBytes": 530380,
+      "encodedSha256": "0ac8e4f81a88a9390e19e3458f86006019c43f882261432ce0a0ef6f66401379",
+      "exact": true,
+      "encodeMsMedian": 21.52029098942876,
+      "decodeMsMedian": 10.015788953751326,
+      "encodeMsAll": [
+        19.609840004704893,
+        22.63661299366504,
+        21.52029098942876
+      ],
+      "decodeMsAll": [
+        8.114507072605193,
+        10.015788953751326,
+        10.489854030311108
+      ]
+    },
+    {
+      "blockBytes": 4096,
+      "seed": 20261129,
+      "codec": "CRTCG1",
+      "sourceBytes": 1048576,
+      "sourceSha256": "b82a02ec534e1a8d93071e636036fabf053132e50ebdf7a34d64def66a0dac26",
+      "encodedBytes": 740171,
+      "encodedSha256": "b3b92c832981546da828fc3b24c8d690eebf335ca422ca2a48418d671d2addf6",
+      "exact": true,
+      "encodeMsMedian": 157.14530798140913,
+      "decodeMsMedian": 77.1806399570778,
+      "encodeMsAll": [
+        155.86467005778104,
+        157.14530798140913,
+        251.52953306678683
+      ],
+      "decodeMsAll": [
+        65.58426399715245,
+        77.1806399570778,
+        120.407982962206
+      ]
+    },
+    {
+      "blockBytes": 4096,
+      "seed": 20261129,
+      "codec": "CRTC1-zlib6",
+      "applicable": false,
+      "reason": "bad shell 1 start or absent seam"
+    },
+    {
+      "blockBytes": 65536,
+      "seed": 20261127,
+      "codec": "gzip-6",
+      "sourceBytes": 1048576,
+      "sourceSha256": "25800ce625ace147ab02722fb79a54f0e15b9ca05a7872b66abe28d250a562b3",
+      "encodedBytes": 527905,
+      "encodedSha256": "1dab411242bb386999af98fdd03ad406c7f55856a05016b1c2d8095c7bc8332c",
+      "exact": true,
+      "encodeMsMedian": 26.844394044019282,
+      "decodeMsMedian": 8.449631044641137,
+      "encodeMsAll": [
+        26.53962792828679,
+        26.844394044019282,
+        28.685166966170073
+      ],
+      "decodeMsAll": [
+        9.660106967203319,
+        7.818583981133997,
+        8.449631044641137
+      ]
+    },
+    {
+      "blockBytes": 65536,
+      "seed": 20261127,
+      "codec": "CRTCG1",
+      "sourceBytes": 1048576,
+      "sourceSha256": "25800ce625ace147ab02722fb79a54f0e15b9ca05a7872b66abe28d250a562b3",
+      "encodedBytes": 613924,
+      "encodedSha256": "f284e61cf7a40e83834f12f9a5bb76ec2d5ffc1c1371cdc7628744a3b48eb05c",
+      "exact": true,
+      "encodeMsMedian": 202.9386549256742,
+      "decodeMsMedian": 60.95753295812756,
+      "encodeMsAll": [
+        167.66497993376106,
+        202.9386549256742,
+        231.9983730558306
+      ],
+      "decodeMsAll": [
+        60.95753295812756,
+        61.889614909887314,
+        59.33378590270877
+      ]
+    },
+    {
+      "blockBytes": 65536,
+      "seed": 20261127,
+      "codec": "CRTC1-zlib6",
+      "applicable": false,
+      "reason": "bad shell 1 start or absent seam"
+    },
+    {
+      "blockBytes": 65536,
+      "seed": 20261128,
+      "codec": "gzip-6",
+      "sourceBytes": 1048576,
+      "sourceSha256": "70a71dbc1e6ad815c06fa648bf37bfdeb97fe7e214da467176a6421cb7cd89d5",
+      "encodedBytes": 527905,
+      "encodedSha256": "4d3aa3a9e4a04bf8aa800d481d3f02aac97881abc8a20819d9d516de5225ec34",
+      "exact": true,
+      "encodeMsMedian": 23.444629041478038,
+      "decodeMsMedian": 10.067950934171677,
+      "encodeMsAll": [
+        21.073240088298917,
+        23.444629041478038,
+        28.86150893755257
+      ],
+      "decodeMsAll": [
+        8.545276941731572,
+        11.092579923570156,
+        10.067950934171677
+      ]
+    },
+    {
+      "blockBytes": 65536,
+      "seed": 20261128,
+      "codec": "CRTCG1",
+      "sourceBytes": 1048576,
+      "sourceSha256": "70a71dbc1e6ad815c06fa648bf37bfdeb97fe7e214da467176a6421cb7cd89d5",
+      "encodedBytes": 613844,
+      "encodedSha256": "b8fbe20f7013a1ef5ec43afdb1ee2fa0d3bec01a35285080b95f4b394e66519a",
+      "exact": true,
+      "encodeMsMedian": 191.62963097915053,
+      "decodeMsMedian": 70.51275402773172,
+      "encodeMsAll": [
+        191.62963097915053,
+        183.77183796837926,
+        211.61314693745226
+      ],
+      "decodeMsAll": [
+        91.38174098916352,
+        70.42171491775662,
+        70.51275402773172
+      ]
+    },
+    {
+      "blockBytes": 65536,
+      "seed": 20261128,
+      "codec": "CRTC1-zlib6",
+      "applicable": false,
+      "reason": "bad shell 1 start or absent seam"
+    },
+    {
+      "blockBytes": 65536,
+      "seed": 20261129,
+      "codec": "gzip-6",
+      "sourceBytes": 1048576,
+      "sourceSha256": "bb10db317696c9a4fa6870a23d1c5b496deb26751d5333dc1ae66883445d3fdf",
+      "encodedBytes": 527900,
+      "encodedSha256": "8ed068e6e066092e12d04149176c312c8f37eac87f4a8149918f9c66e9560db1",
+      "exact": true,
+      "encodeMsMedian": 25.64836002420634,
+      "decodeMsMedian": 9.360107011161745,
+      "encodeMsAll": [
+        23.434913950040936,
+        25.64836002420634,
+        31.294569023884833
+      ],
+      "decodeMsAll": [
+        8.378298953175545,
+        9.936605929397047,
+        9.360107011161745
+      ]
+    },
+    {
+      "blockBytes": 65536,
+      "seed": 20261129,
+      "codec": "CRTCG1",
+      "sourceBytes": 1048576,
+      "sourceSha256": "bb10db317696c9a4fa6870a23d1c5b496deb26751d5333dc1ae66883445d3fdf",
+      "encodedBytes": 614045,
+      "encodedSha256": "71d4f66387f6666e27ba24bfee329bba505fae412a71e83dc481c4edec408bfd",
+      "exact": true,
+      "encodeMsMedian": 245.9499780088663,
+      "decodeMsMedian": 67.30058800894767,
+      "encodeMsAll": [
+        219.51454191002995,
+        250.7077750051394,
+        245.9499780088663
+      ],
+      "decodeMsAll": [
+        64.3101210007444,
+        67.30058800894767,
+        96.25871491152793
+      ]
+    },
+    {
+      "blockBytes": 65536,
+      "seed": 20261129,
+      "codec": "CRTC1-zlib6",
+      "applicable": false,
+      "reason": "bad shell 1 start or absent seam"
+    }
+  ]
+}
