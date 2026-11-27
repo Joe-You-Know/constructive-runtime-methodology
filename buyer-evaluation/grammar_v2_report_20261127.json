@@ -1,0 +1,298 @@
+{
+  "schema": "crt-grammar-v2-prototype",
+  "python": "3.12.16 (main, Nov 24 2026, 07:52:27) [GCC 14.2.0]",
+  "sourceLimit": 1048576,
+  "roundTrips": 15,
+  "negativeControls": 45,
+  "rows": [
+    {
+      "case": "mixed-512-20261127",
+      "source": 1048576,
+      "sha256": "921d5c96ea9d15760e949ea40006428051b970b4fa8bb2e432031fd122097adf",
+      "gzip": 536849,
+      "crt": 529700,
+      "encodedSha256": "0d22b8846396d1f568a47e4c893caec17582fad269a6391f4fd10b25af729465",
+      "encodeMs": 1111.7794886231422,
+      "decodeMs": 6.217403337359428,
+      "gzipEncodeMs": 14.933445490896702,
+      "gzipDecodeMs": 3.636382520198822,
+      "exact": true,
+      "frame": 512,
+      "frames": 2048,
+      "modes": {
+        "repeat": 1,
+        "raw": 1024,
+        "patch": 1023
+      }
+    },
+    {
+      "case": "mixed-512-20261128",
+      "source": 1048576,
+      "sha256": "5a6b8c186d7c6f4b9a791d1d8e4d3ec4b0b0399ae35ccca3b08bde9fff9303cf",
+      "gzip": 536859,
+      "crt": 529700,
+      "encodedSha256": "6542876f36e698d182da6ee6b2f9d33032768fc5013740828ba01f2340366452",
+      "encodeMs": 1127.6805205270648,
+      "decodeMs": 4.4692568480968475,
+      "gzipEncodeMs": 15.01360908150673,
+      "gzipDecodeMs": 2.780502662062645,
+      "exact": true,
+      "frame": 512,
+      "frames": 2048,
+      "modes": {
+        "repeat": 1,
+        "raw": 1024,
+        "patch": 1023
+      }
+    },
+    {
+      "case": "mixed-512-20261129",
+      "source": 1048576,
+      "sha256": "a5ac5fb8370c1c8e4f384b160d6978a6adf4a6973f298ce25a5d5c6899efc229",
+      "gzip": 536856,
+      "crt": 529700,
+      "encodedSha256": "f741504bcfd921416fc3dcb90c73ba71942dbe0800b5c93b06563f2859bb5c18",
+      "encodeMs": 1110.4221809655428,
+      "decodeMs": 4.57999762147665,
+      "gzipEncodeMs": 14.794677495956421,
+      "gzipDecodeMs": 2.4563316255807877,
+      "exact": true,
+      "frame": 512,
+      "frames": 2048,
+      "modes": {
+        "repeat": 1,
+        "raw": 1024,
+        "patch": 1023
+      }
+    },
+    {
+      "case": "mixed-4096-20261127",
+      "source": 1048576,
+      "sha256": "f67ea20894348c717a8edb03c2f62cf2d6f5e7b7e22ed94c536816d959a9504e",
+      "gzip": 530379,
+      "crt": 525020,
+      "encodedSha256": "59073434e6c50e16fdba66922f6f112ba23a4877d9ce9c6f4ce8ef9728d3f1d9",
+      "encodeMs": 1031.335678882897,
+      "decodeMs": 1.7144223675131798,
+      "gzipEncodeMs": 14.354187995195389,
+      "gzipDecodeMs": 2.5206608697772026,
+      "exact": true,
+      "frame": 4096,
+      "frames": 256,
+      "modes": {
+        "repeat": 1,
+        "raw": 128,
+        "patch": 127
+      }
+    },
+    {
+      "case": "mixed-4096-20261128",
+      "source": 1048576,
+      "sha256": "a4506209c1184827b432075d042a2f97d9b3c0b2f44454acb7e12197bffeb56d",
+      "gzip": 530363,
+      "crt": 525020,
+      "encodedSha256": "e861da552ba057abf32f70922f0fcf9dc9eeadfbfbc1262684389cfbf34d9b2c",
+      "encodeMs": 1065.0345645844936,
+      "decodeMs": 1.7839698120951653,
+      "gzipEncodeMs": 14.282398857176304,
+      "gzipDecodeMs": 2.427726984024048,
+      "exact": true,
+      "frame": 4096,
+      "frames": 256,
+      "modes": {
+        "repeat": 1,
+        "raw": 128,
+        "patch": 127
+      }
+    },
+    {
+      "case": "mixed-4096-20261129",
+      "source": 1048576,
+      "sha256": "b82a02ec534e1a8d93071e636036fabf053132e50ebdf7a34d64def66a0dac26",
+      "gzip": 530380,
+      "crt": 525020,
+      "encodedSha256": "26f790d30d0bee6c39857b8dbdf5af0eb066bfde155583571ae1e6ea46c72ae7",
+      "encodeMs": 1046.1891256272793,
+      "decodeMs": 1.7238082364201546,
+      "gzipEncodeMs": 14.625136740505695,
+      "gzipDecodeMs": 2.4464577436447144,
+      "exact": true,
+      "frame": 4096,
+      "frames": 256,
+      "modes": {
+        "repeat": 1,
+        "raw": 128,
+        "patch": 127
+      }
+    },
+    {
+      "case": "mixed-65536-20261127",
+      "source": 1048576,
+      "sha256": "25800ce625ace147ab02722fb79a54f0e15b9ca05a7872b66abe28d250a562b3",
+      "gzip": 527905,
+      "crt": 524395,
+      "encodedSha256": "566a4e83a47dff3e51c07d6e1dc660a54cd25cc4e08572c29861585709d72a71",
+      "encodeMs": 1084.79380980134,
+      "decodeMs": 1.3310564681887627,
+      "gzipEncodeMs": 13.765868730843067,
+      "gzipDecodeMs": 1.1967802420258522,
+      "exact": true,
+      "frame": 65536,
+      "frames": 16,
+      "modes": {
+        "repeat": 1,
+        "raw": 8,
+        "patch": 7
+      }
+    },
+    {
+      "case": "mixed-65536-20261128",
+      "source": 1048576,
+      "sha256": "70a71dbc1e6ad815c06fa648bf37bfdeb97fe7e214da467176a6421cb7cd89d5",
+      "gzip": 527905,
+      "crt": 524395,
+      "encodedSha256": "d7478b5897aea0f56006c3cb5cb4b72cd52161fd05abc29ddd707e4e04440d7e",
+      "encodeMs": 1055.3604224696755,
+      "decodeMs": 1.325530931353569,
+      "gzipEncodeMs": 13.283295556902885,
+      "gzipDecodeMs": 1.1342288926243782,
+      "exact": true,
+      "frame": 65536,
+      "frames": 16,
+      "modes": {
+        "repeat": 1,
+        "raw": 8,
+        "patch": 7
+      }
+    },
+    {
+      "case": "mixed-65536-20261129",
+      "source": 1048576,
+      "sha256": "bb10db317696c9a4fa6870a23d1c5b496deb26751d5333dc1ae66883445d3fdf",
+      "gzip": 527900,
+      "crt": 524395,
+      "encodedSha256": "9c6b6dd4bcc258d5b396f4509ae74e6fe44ffbc323f731d72fe7b2a3e8107542",
+      "encodeMs": 1030.9860333800316,
+      "decodeMs": 1.4973506331443787,
+      "gzipEncodeMs": 13.189751654863358,
+      "gzipDecodeMs": 1.1816639453172684,
+      "exact": true,
+      "frame": 65536,
+      "frames": 16,
+      "modes": {
+        "repeat": 1,
+        "raw": 8,
+        "patch": 7
+      }
+    },
+    {
+      "case": "random-1MiB",
+      "source": 1048576,
+      "sha256": "d3cc80f2e062094e9d161ffc51e71d96560a9d5a1c4712ab47e67d950f5e5d11",
+      "gzip": 1048914,
+      "crt": 1048621,
+      "encodedSha256": "93f598b2f3e0b3afe68de72247cea2ba275c129dac6dbb61c001ef46606d0007",
+      "encodeMs": 339.18137662112713,
+      "decodeMs": 1.3109482824802399,
+      "gzipEncodeMs": 24.42586701363325,
+      "gzipDecodeMs": 0.7623666897416115,
+      "exact": true,
+      "frame": 1048576,
+      "frames": 1,
+      "modes": {
+        "raw": 1
+      }
+    },
+    {
+      "case": "repeat-1MiB",
+      "source": 1048576,
+      "sha256": "3fa83f5be6609365a03513492630a10994adb31ef8368a140baff907b02cb92e",
+      "gzip": 2595,
+      "crt": 64,
+      "encodedSha256": "0cfb0f3a9f7a450a6ae1cfd864dcf24b9bd887713fb8a4123a2d2d399120ab32",
+      "encodeMs": 167.2287154942751,
+      "decodeMs": 1.1965855956077576,
+      "gzipEncodeMs": 4.786639474332333,
+      "gzipDecodeMs": 0.7880721241235733,
+      "exact": true,
+      "frame": 1048576,
+      "frames": 1,
+      "modes": {
+        "repeat": 1
+      }
+    },
+    {
+      "case": "shifted-mixed",
+      "source": 1048576,
+      "sha256": "c6067e6a0ec1db40914821efa9de5d3d84fae3bd91bbb185b57947b622cc7975",
+      "gzip": 530267,
+      "crt": 562040,
+      "encodedSha256": "53b0bf0c135e967cbc60ae4444d2a98188648cf5856cfde01dbc622613de0073",
+      "encodeMs": 1096.315497532487,
+      "decodeMs": 18.908957950770855,
+      "gzipEncodeMs": 14.237964525818825,
+      "gzipDecodeMs": 2.449776977300644,
+      "exact": true,
+      "frame": "variable",
+      "frames": 640,
+      "modes": {
+        "token": 256,
+        "repeat": 384
+      }
+    },
+    {
+      "case": "source-code",
+      "source": 27929,
+      "sha256": "0015270627397b1b96786315b693dfe481bf601a35c478b044bd9ae8c14300e9",
+      "gzip": 8116,
+      "crt": 27307,
+      "encodedSha256": "61285a4f9757d49c056ddabdaf4d5a69bc0bff143c6d0ce5f7d478d575580335",
+      "encodeMs": 22.21356611698866,
+      "decodeMs": 1.2698294594883919,
+      "gzipEncodeMs": 0.6081275641918182,
+      "gzipDecodeMs": 0.12590177357196808,
+      "exact": true,
+      "frame": 65536,
+      "frames": 1,
+      "modes": {
+        "token": 1
+      }
+    },
+    {
+      "case": "odd-length",
+      "source": 65537,
+      "sha256": "07a187472e3b2fd56ec31202e7c6eda9eb97690e9a80495fb9efa3326be72bb9",
+      "gzip": 65575,
+      "crt": 65582,
+      "encodedSha256": "d4047a74a94e729e7649ba5f492b361a26f911bf2ce9e2bd671855ba10b4dc3a",
+      "encodeMs": 21.61666378378868,
+      "decodeMs": 0.08293893188238144,
+      "gzipEncodeMs": 1.315271481871605,
+      "gzipDecodeMs": 0.043293461203575134,
+      "exact": true,
+      "frame": 262144,
+      "frames": 1,
+      "modes": {
+        "raw": 1
+      }
+    },
+    {
+      "case": "empty",
+      "source": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gzip": 20,
+      "crt": 40,
+      "encodedSha256": "f1a33b7049364d7c79b31e868dcc712e1dccf9725477b7021e72a91002fb997a",
+      "encodeMs": 0.01551024615764618,
+      "decodeMs": 0.005840323865413666,
+      "gzipEncodeMs": 0.013329088687896729,
+      "gzipDecodeMs": 0.01692119985818863,
+      "exact": true,
+      "frame": "variable",
+      "frames": 0,
+      "modes": {}
+    }
+  ],
+  "timingScope": "single in-memory run per distinct input; no disk writes; selection cost included",
+  "commercialRuntimeEvaluated": false
+}
