@@ -23,7 +23,11 @@
     "currency": "USD",
     "oneTimeCents": 499,
     "availability": "consult authoritativeProductStatus; do not attempt purchase when purchase_available is false",
-    "updatesSubscriptionActive": false
+    "updatesSubscriptionActive": false,
+    "paymentModel": "stripe_managed_payments",
+    "managedPaymentsLiveEligibilityVerified": true,
+    "purchaseAvailableAtLastCheck": false,
+    "taxScope": "Stripe covers eligible indirect tax jurisdictions; see authoritativeProductStatus for availability"
   },
   "evaluation": {
     "experimental": true,
