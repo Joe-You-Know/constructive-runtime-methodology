@@ -1,0 +1,60 @@
+{
+  "source-code": {
+    "sourceBytes": 27929,
+    "gzip6": 8116,
+    "crtg4": 27307,
+    "crtg4Modes": {
+      "token": 1
+    },
+    "crtg4Runs": 0,
+    "encodeMs": 62,
+    "lineRelations": {
+      "lines": 636,
+      "exactRepeatLines": 45,
+      "exactRepeatBytes": 1070,
+      "nearPrevLines": 2,
+      "nearPrevCost": 16,
+      "remainingLiteralBytes": 26204
+    }
+  },
+  "log-lines": {
+    "sourceBytes": 1048576,
+    "gzip6": 73713,
+    "crtg4": 1048621,
+    "crtg4Modes": {
+      "raw": 1
+    },
+    "crtg4Runs": 0,
+    "encodeMs": 3077,
+    "lineRelations": {
+      "lines": 18079,
+      "exactRepeatLines": 0,
+      "exactRepeatBytes": 0,
+      "nearPrevLines": 18077,
+      "nearPrevCost": 147842,
+      "remainingLiteralBytes": 109
+    },
+    "fieldRelations": {
+      "lines": 18078,
+      "unchangedFields": 128739,
+      "numericChangedFields": 33954,
+      "otherChangedFields": 18077,
+      "dominantStepPerField": {
+        "5": {
+          "step": 1,
+          "count": 2013
+        },
+        "7": {
+          "step": 1,
+          "count": 18077
+        }
+      }
+    },
+    "searchProbe": {
+      "discoverCalls": 20000,
+      "failed": 20000,
+      "ms": 57,
+      "note": "first 20,000 positions only; every failed call scans up to 128+8 bytes for an anchor"
+    }
+  }
+}

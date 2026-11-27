@@ -53,3 +53,11 @@ Selected results (bytes; gzip-6 / CRTG3 / CRTG4):
 | Log lines with counters | 73,713 | 1,048,621 | 1,048,621 |
 
 CRTG4 is no larger than CRTG3 on any of the 23 primary workloads and is smaller than gzip-6 on 19 of them (CRTG3: 18). gzip-6 still wins on source code, an odd-length random input, empty and short inputs, dense defects (every 16 B) and log lines, where no exact period is discovered and the encoder spends about 3 s searching. 281/281 round trips exact (23 primary, 8 additional, 250 randomized); 124/124 negative controls rejected. The stopping rules and the 8 additional workloads were designed after inspecting CRTG3/CRTG4 behaviour. Single developer-run measurements on one machine; not independent validation and not the commercial runtime.
+
+### Remaining losses: measurements (no codec change)
+
+`loss_analysis_v4.py` → `loss_analysis_v4_20261127.json`; `search_skip_experiment.py` → `search_skip_experiment_20261127.json`.
+
+- **Source code:** CRTG4 finds no periodic run. Only 45 of 636 lines (1,070 B, 3.8%) repeat exactly. Periodic relationships cannot express this redundancy.
+- **Log lines:** every line differs from the previous one, so no exact period exists. "Previous line plus byte exceptions" would cost about 147,842 B, worse than gzip-6 (73,713 B). The job field increases by exactly 1 on 18,077 of 18,077 lines, which points to field/counter relationships as the next hypothesis. Not yet built.
+- **Search cost:** adaptive skipping after failed discovery cuts total encode time from 12.0 s to 3.2 s over 31 workloads (log lines 3.2 s → 0.3 s), but increases size. At skip 4, mixed-512 grows to 537,464 B and loses to gzip-6. Rejected as a default because storage efficiency comes first. Every skipped encoding still decoded exactly.
