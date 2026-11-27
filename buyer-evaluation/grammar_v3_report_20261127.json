@@ -1,0 +1,1629 @@
+{
+  "schema": "crt-content-boundary-v3",
+  "python": "3.12.16 (main, Nov 24 2026, 07:52:27) [GCC 14.2.0]",
+  "platform": "Linux-6.12.113-138.209.amzn2023.x86_64-x86_64-with-glibc2.41",
+  "sourceLimit": 1048576,
+  "roundTrips": 23,
+  "negativeControls": 92,
+  "commercialRuntimeEvaluated": false,
+  "timingScope": "single in-memory run, encoder search included, fixed order; no disk or transport",
+  "rows": [
+    {
+      "case": "mixed-512-20261127",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "921d5c96ea9d15760e949ea40006428051b970b4fa8bb2e432031fd122097adf",
+      "gzipBytes": 536849,
+      "v2Bytes": 529700,
+      "v3Bytes": 534096,
+      "encodedSHA256": "59cc6568097058e5a4c313fe7fe12a769e37217259bbb87a7914d877ac7b3150",
+      "exact": true,
+      "gzipEncodeMs": 16.159335151314735,
+      "v2EncodeMs": 1606.1428650282323,
+      "v3EncodeMs": 688.0498938262463,
+      "v3DecodeMs": 5.33343805000186,
+      "modes": {
+        "repeat": 15,
+        "raw": 1024,
+        "patch": 1009
+      },
+      "periodicRuns": 1024,
+      "runSample": [
+        [
+          0,
+          512,
+          25,
+          "repeat"
+        ],
+        [
+          1024,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          2048,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          3072,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          4096,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          5120,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          6144,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          7168,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          8192,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          9216,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          10240,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          11264,
+          512,
+          25,
+          "patch"
+        ]
+      ]
+    },
+    {
+      "case": "mixed-512-20261128",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "5a6b8c186d7c6f4b9a791d1d8e4d3ec4b0b0399ae35ccca3b08bde9fff9303cf",
+      "gzipBytes": 536859,
+      "v2Bytes": 529700,
+      "v3Bytes": 533964,
+      "encodedSHA256": "7ce9a8ab391b364ba0b2e22496680361ac40558d92d87cdffe8604f1cf8cb71e",
+      "exact": true,
+      "gzipEncodeMs": 17.012515105307102,
+      "v2EncodeMs": 1363.9377788640559,
+      "v3EncodeMs": 648.931922391057,
+      "v3DecodeMs": 4.804895259439945,
+      "modes": {
+        "repeat": 9,
+        "raw": 1024,
+        "patch": 1015
+      },
+      "periodicRuns": 1024,
+      "runSample": [
+        [
+          0,
+          512,
+          25,
+          "repeat"
+        ],
+        [
+          1024,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          2048,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          3072,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          4096,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          5120,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          6144,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          7168,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          8192,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          9216,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          10240,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          11264,
+          512,
+          25,
+          "patch"
+        ]
+      ]
+    },
+    {
+      "case": "mixed-512-20261129",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "a5ac5fb8370c1c8e4f384b160d6978a6adf4a6973f298ce25a5d5c6899efc229",
+      "gzipBytes": 536856,
+      "v2Bytes": 529700,
+      "v3Bytes": 533966,
+      "encodedSHA256": "0ecaece5a4ac0114759efa2f221ea65cf2e1f6d8eda2c5647a26ee35ab579df6",
+      "exact": true,
+      "gzipEncodeMs": 15.0920320302248,
+      "v2EncodeMs": 1209.3326561152935,
+      "v3EncodeMs": 729.5777089893818,
+      "v3DecodeMs": 4.768725950270891,
+      "modes": {
+        "repeat": 9,
+        "raw": 1024,
+        "patch": 1015
+      },
+      "periodicRuns": 1024,
+      "runSample": [
+        [
+          0,
+          512,
+          25,
+          "repeat"
+        ],
+        [
+          1024,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          2048,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          3072,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          4096,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          5120,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          6144,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          7168,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          8192,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          9216,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          10240,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          11264,
+          512,
+          25,
+          "patch"
+        ]
+      ]
+    },
+    {
+      "case": "mixed-4096-20261127",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "f67ea20894348c717a8edb03c2f62cf2d6f5e7b7e22ed94c536816d959a9504e",
+      "gzipBytes": 530379,
+      "v2Bytes": 525020,
+      "v3Bytes": 525575,
+      "encodedSHA256": "c6152734001b00fa3493ef5bc948efd098bc5efbfe57b5ec65d882862a1f5027",
+      "exact": true,
+      "gzipEncodeMs": 14.284709002822638,
+      "v2EncodeMs": 1028.738141991198,
+      "v3EncodeMs": 524.5164129883051,
+      "v3DecodeMs": 1.7168070189654827,
+      "modes": {
+        "repeat": 3,
+        "raw": 128,
+        "patch": 125
+      },
+      "periodicRuns": 128,
+      "runSample": [
+        [
+          0,
+          4096,
+          25,
+          "repeat"
+        ],
+        [
+          8192,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          16384,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          24576,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          32768,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          40960,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          49152,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          57344,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          65536,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          73728,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          81920,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          90112,
+          4096,
+          25,
+          "patch"
+        ]
+      ]
+    },
+    {
+      "case": "mixed-4096-20261128",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "a4506209c1184827b432075d042a2f97d9b3c0b2f44454acb7e12197bffeb56d",
+      "gzipBytes": 530363,
+      "v2Bytes": 525020,
+      "v3Bytes": 525530,
+      "encodedSHA256": "e607796ed950e0139a512a2b31d0d602be97d01e9ca8fd984a082d86c1e3b9f7",
+      "exact": true,
+      "gzipEncodeMs": 13.824711088091135,
+      "v2EncodeMs": 1195.8910953253508,
+      "v3EncodeMs": 534.3077089637518,
+      "v3DecodeMs": 1.72715587541461,
+      "modes": {
+        "repeat": 1,
+        "raw": 128,
+        "patch": 127
+      },
+      "periodicRuns": 128,
+      "runSample": [
+        [
+          0,
+          4096,
+          25,
+          "repeat"
+        ],
+        [
+          8192,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          16384,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          24576,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          32768,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          40960,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          49152,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          57344,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          65536,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          73728,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          81920,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          90112,
+          4096,
+          25,
+          "patch"
+        ]
+      ]
+    },
+    {
+      "case": "mixed-4096-20261129",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "b82a02ec534e1a8d93071e636036fabf053132e50ebdf7a34d64def66a0dac26",
+      "gzipBytes": 530380,
+      "v2Bytes": 525020,
+      "v3Bytes": 525530,
+      "encodedSHA256": "4ac2aeadd8ed31529d8bd858ccd83cbe686f838c27fbe026e005fece3ae21a08",
+      "exact": true,
+      "gzipEncodeMs": 13.965003192424774,
+      "v2EncodeMs": 1120.7537790760398,
+      "v3EncodeMs": 524.1840700618923,
+      "v3DecodeMs": 1.7598951235413551,
+      "modes": {
+        "repeat": 1,
+        "raw": 128,
+        "patch": 127
+      },
+      "periodicRuns": 128,
+      "runSample": [
+        [
+          0,
+          4096,
+          25,
+          "repeat"
+        ],
+        [
+          8192,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          16384,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          24576,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          32768,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          40960,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          49152,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          57344,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          65536,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          73728,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          81920,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          90112,
+          4096,
+          25,
+          "patch"
+        ]
+      ]
+    },
+    {
+      "case": "mixed-65536-20261127",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "25800ce625ace147ab02722fb79a54f0e15b9ca05a7872b66abe28d250a562b3",
+      "gzipBytes": 527905,
+      "v2Bytes": 524395,
+      "v3Bytes": 524440,
+      "encodedSHA256": "3c7d5c114ea83a9f50cc8205dc4e72063af636886d71a8f77a161c73db1d9ec1",
+      "exact": true,
+      "gzipEncodeMs": 13.148867059499025,
+      "v2EncodeMs": 1194.85838804394,
+      "v3EncodeMs": 530.4635218344629,
+      "v3DecodeMs": 1.2711621820926666,
+      "modes": {
+        "repeat": 1,
+        "raw": 8,
+        "patch": 7
+      },
+      "periodicRuns": 8,
+      "runSample": [
+        [
+          0,
+          65536,
+          25,
+          "repeat"
+        ],
+        [
+          131072,
+          65536,
+          25,
+          "patch"
+        ],
+        [
+          262144,
+          65536,
+          25,
+          "patch"
+        ],
+        [
+          393216,
+          65536,
+          25,
+          "patch"
+        ],
+        [
+          524288,
+          65536,
+          25,
+          "patch"
+        ],
+        [
+          655360,
+          65536,
+          25,
+          "patch"
+        ],
+        [
+          786432,
+          65536,
+          25,
+          "patch"
+        ],
+        [
+          917504,
+          65536,
+          25,
+          "patch"
+        ]
+      ]
+    },
+    {
+      "case": "mixed-65536-20261128",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "70a71dbc1e6ad815c06fa648bf37bfdeb97fe7e214da467176a6421cb7cd89d5",
+      "gzipBytes": 527905,
+      "v2Bytes": 524395,
+      "v3Bytes": 524440,
+      "encodedSHA256": "e484bde6aa47bbbc1b61ce6a3e5eb8d7f880aaa0a8c58e07526be9c1d2690316",
+      "exact": true,
+      "gzipEncodeMs": 13.005697168409824,
+      "v2EncodeMs": 1137.233318760991,
+      "v3EncodeMs": 536.3588728941977,
+      "v3DecodeMs": 1.451760996133089,
+      "modes": {
+        "repeat": 1,
+        "raw": 8,
+        "patch": 7
+      },
+      "periodicRuns": 8,
+      "runSample": [
+        [
+          0,
+          65536,
+          25,
+          "repeat"
+        ],
+        [
+          131072,
+          65536,
+          25,
+          "patch"
+        ],
+        [
+          262144,
+          65536,
+          25,
+          "patch"
+        ],
+        [
+          393216,
+          65536,
+          25,
+          "patch"
+        ],
+        [
+          524288,
+          65536,
+          25,
+          "patch"
+        ],
+        [
+          655360,
+          65536,
+          25,
+          "patch"
+        ],
+        [
+          786432,
+          65536,
+          25,
+          "patch"
+        ],
+        [
+          917504,
+          65536,
+          25,
+          "patch"
+        ]
+      ]
+    },
+    {
+      "case": "mixed-65536-20261129",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "bb10db317696c9a4fa6870a23d1c5b496deb26751d5333dc1ae66883445d3fdf",
+      "gzipBytes": 527900,
+      "v2Bytes": 524395,
+      "v3Bytes": 524440,
+      "encodedSHA256": "da46dfcf822ddbd0ecece2abca8953a598463c592a9a477af6fd7355924a2c87",
+      "exact": true,
+      "gzipEncodeMs": 13.233914040029049,
+      "v2EncodeMs": 1111.449671909213,
+      "v3EncodeMs": 510.3283179923892,
+      "v3DecodeMs": 1.4371550641953945,
+      "modes": {
+        "repeat": 1,
+        "raw": 8,
+        "patch": 7
+      },
+      "periodicRuns": 8,
+      "runSample": [
+        [
+          0,
+          65536,
+          25,
+          "repeat"
+        ],
+        [
+          131072,
+          65536,
+          25,
+          "patch"
+        ],
+        [
+          262144,
+          65536,
+          25,
+          "patch"
+        ],
+        [
+          393216,
+          65536,
+          25,
+          "patch"
+        ],
+        [
+          524288,
+          65536,
+          25,
+          "patch"
+        ],
+        [
+          655360,
+          65536,
+          25,
+          "patch"
+        ],
+        [
+          786432,
+          65536,
+          25,
+          "patch"
+        ],
+        [
+          917504,
+          65536,
+          25,
+          "patch"
+        ]
+      ]
+    },
+    {
+      "case": "shifted-137",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "c6067e6a0ec1db40914821efa9de5d3d84fae3bd91bbb185b57947b622cc7975",
+      "gzipBytes": 530267,
+      "v2Bytes": 562040,
+      "v3Bytes": 525398,
+      "encodedSHA256": "4c3439dd72485b9e35c9153aec573c0f194c6b35c33acbd28a488fc7644f92f1",
+      "exact": true,
+      "gzipEncodeMs": 14.346167910844088,
+      "v2EncodeMs": 1166.627715807408,
+      "v3EncodeMs": 589.2022801563144,
+      "v3DecodeMs": 1.9252928905189037,
+      "modes": {
+        "repeat": 2,
+        "raw": 128,
+        "patch": 127
+      },
+      "periodicRuns": 129,
+      "runSample": [
+        [
+          0,
+          137,
+          1,
+          "repeat"
+        ],
+        [
+          137,
+          4096,
+          25,
+          "repeat"
+        ],
+        [
+          8329,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          16521,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          24713,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          32905,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          41097,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          49289,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          57481,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          65673,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          73865,
+          4096,
+          25,
+          "patch"
+        ],
+        [
+          82057,
+          4096,
+          25,
+          "patch"
+        ]
+      ]
+    },
+    {
+      "case": "shifted-1",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "b33f6226529f1306860cde51b4344697d98adf31438eb6816b55f5ad189ddd94",
+      "gzipBytes": 536873,
+      "v2Bytes": 633685,
+      "v3Bytes": 534015,
+      "encodedSHA256": "4fdaefccba46bf4d6a0e68563895b26750b25624c46ce001eac16bd674823dc3",
+      "exact": true,
+      "gzipEncodeMs": 15.984016004949808,
+      "v2EncodeMs": 1235.018968116492,
+      "v3EncodeMs": 565.4156268574297,
+      "v3DecodeMs": 4.654712043702602,
+      "modes": {
+        "raw": 1025,
+        "repeat": 11,
+        "patch": 1013
+      },
+      "periodicRuns": 1024,
+      "runSample": [
+        [
+          1,
+          512,
+          25,
+          "repeat"
+        ],
+        [
+          1025,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          2049,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          3073,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          4097,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          5121,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          6145,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          7169,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          8193,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          9217,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          10241,
+          512,
+          25,
+          "patch"
+        ],
+        [
+          11265,
+          512,
+          25,
+          "patch"
+        ]
+      ]
+    },
+    {
+      "case": "shifted-251",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "76db7774d3a3a58305594c5581175d1370258e215a2209e966843007c3591e22",
+      "gzipBytes": 527893,
+      "v2Bytes": 528663,
+      "v3Bytes": 524443,
+      "encodedSHA256": "4a800463e7301dba4d744d70f76e2f27c77023c21c7ae6df46e858df800b4786",
+      "exact": true,
+      "gzipEncodeMs": 12.90998701006174,
+      "v2EncodeMs": 1048.394729848951,
+      "v3EncodeMs": 545.4782820306718,
+      "v3DecodeMs": 1.322867814451456,
+      "modes": {
+        "raw": 9,
+        "repeat": 1,
+        "patch": 7
+      },
+      "periodicRuns": 8,
+      "runSample": [
+        [
+          251,
+          65536,
+          25,
+          "repeat"
+        ],
+        [
+          131323,
+          65536,
+          25,
+          "patch"
+        ],
+        [
+          262395,
+          65536,
+          25,
+          "patch"
+        ],
+        [
+          393467,
+          65536,
+          25,
+          "patch"
+        ],
+        [
+          524539,
+          65536,
+          25,
+          "patch"
+        ],
+        [
+          655611,
+          65536,
+          25,
+          "patch"
+        ],
+        [
+          786683,
+          65536,
+          25,
+          "patch"
+        ],
+        [
+          917755,
+          65536,
+          25,
+          "patch"
+        ]
+      ]
+    },
+    {
+      "case": "irregular-20261131",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "72b66854876c0479f81edb206da0ac0377b44060a41a1e13e59599d3d6c70d49",
+      "gzipBytes": 535410,
+      "v2Bytes": 593640,
+      "v3Bytes": 530919,
+      "encodedSHA256": "c5e4032d7f13391e2a4a12a47156d77033c23dd602e8de6064c68cdc3434a1d8",
+      "exact": true,
+      "gzipEncodeMs": 14.634064864367247,
+      "v2EncodeMs": 314.90983394905925,
+      "v3EncodeMs": 423.29381173476577,
+      "v3DecodeMs": 1.6753789968788624,
+      "modes": {
+        "raw": 123,
+        "repeat": 122
+      },
+      "periodicRuns": 122,
+      "runSample": [
+        [
+          137,
+          1592,
+          37,
+          "repeat"
+        ],
+        [
+          7427,
+          6471,
+          7,
+          "repeat"
+        ],
+        [
+          17656,
+          320,
+          19,
+          "repeat"
+        ],
+        [
+          26677,
+          5763,
+          61,
+          "repeat"
+        ],
+        [
+          36132,
+          730,
+          3,
+          "repeat"
+        ],
+        [
+          42656,
+          1180,
+          37,
+          "repeat"
+        ],
+        [
+          44962,
+          1101,
+          3,
+          "repeat"
+        ],
+        [
+          48571,
+          1854,
+          19,
+          "repeat"
+        ],
+        [
+          53127,
+          1866,
+          128,
+          "repeat"
+        ],
+        [
+          61633,
+          3258,
+          127,
+          "repeat"
+        ],
+        [
+          65906,
+          6204,
+          19,
+          "repeat"
+        ],
+        [
+          74714,
+          2808,
+          61,
+          "repeat"
+        ]
+      ]
+    },
+    {
+      "case": "irregular-20261132",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "054af9d34104989ece8720239ab09c0e78d377d8546394abdf9c6a8a1dfb4843",
+      "gzipBytes": 532030,
+      "v2Bytes": 589499,
+      "v3Bytes": 527544,
+      "encodedSHA256": "94bf987979fc192497a751f71c154a3b80d1309c15fbeb7c2e003f2aa7f0701b",
+      "exact": true,
+      "gzipEncodeMs": 14.295060187578201,
+      "v2EncodeMs": 360.3421049192548,
+      "v3EncodeMs": 433.6510170251131,
+      "v3DecodeMs": 1.7521181143820286,
+      "modes": {
+        "raw": 124,
+        "repeat": 123
+      },
+      "periodicRuns": 123,
+      "runSample": [
+        [
+          137,
+          6013,
+          19,
+          "repeat"
+        ],
+        [
+          8723,
+          5018,
+          19,
+          "repeat"
+        ],
+        [
+          17698,
+          5490,
+          19,
+          "repeat"
+        ],
+        [
+          31345,
+          983,
+          127,
+          "repeat"
+        ],
+        [
+          33304,
+          5200,
+          128,
+          "repeat"
+        ],
+        [
+          39393,
+          2763,
+          19,
+          "repeat"
+        ],
+        [
+          43782,
+          1058,
+          7,
+          "repeat"
+        ],
+        [
+          46528,
+          8748,
+          37,
+          "repeat"
+        ],
+        [
+          56968,
+          2719,
+          37,
+          "repeat"
+        ],
+        [
+          67125,
+          3594,
+          37,
+          "repeat"
+        ],
+        [
+          75783,
+          6410,
+          127,
+          "repeat"
+        ],
+        [
+          87915,
+          3342,
+          37,
+          "repeat"
+        ]
+      ]
+    },
+    {
+      "case": "irregular-20261133",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "56ee5e806a93f6324728e4536a1ac7ab76710416e5c6c710e5113de6eefb24d3",
+      "gzipBytes": 519226,
+      "v2Bytes": 573988,
+      "v3Bytes": 514616,
+      "encodedSHA256": "5d080649367da0527567f8740ba6ae1c09141d19b67bba78b32fc497ce014b45",
+      "exact": true,
+      "gzipEncodeMs": 14.17461596429348,
+      "v2EncodeMs": 352.8554430231452,
+      "v3EncodeMs": 429.02710288763046,
+      "v3DecodeMs": 1.727570779621601,
+      "modes": {
+        "raw": 120,
+        "repeat": 119
+      },
+      "periodicRuns": 119,
+      "runSample": [
+        [
+          137,
+          1489,
+          128,
+          "repeat"
+        ],
+        [
+          8253,
+          4985,
+          3,
+          "repeat"
+        ],
+        [
+          19726,
+          5455,
+          7,
+          "repeat"
+        ],
+        [
+          28727,
+          1987,
+          127,
+          "repeat"
+        ],
+        [
+          36735,
+          4290,
+          127,
+          "repeat"
+        ],
+        [
+          44666,
+          393,
+          61,
+          "repeat"
+        ],
+        [
+          49263,
+          7972,
+          128,
+          "repeat"
+        ],
+        [
+          62324,
+          846,
+          3,
+          "repeat"
+        ],
+        [
+          71670,
+          5423,
+          127,
+          "repeat"
+        ],
+        [
+          77268,
+          4674,
+          7,
+          "repeat"
+        ],
+        [
+          84492,
+          2213,
+          3,
+          "repeat"
+        ],
+        [
+          88035,
+          7638,
+          128,
+          "repeat"
+        ]
+      ]
+    },
+    {
+      "case": "changing-motif",
+      "sourceBytes": 887202,
+      "sourceSHA256": "cbc78c5f4ea4115af40b7ab778b800759666bb0d748f83080555658b9279c7d1",
+      "gzipBytes": 252448,
+      "v2Bytes": 328970,
+      "v3Bytes": 247475,
+      "encodedSHA256": "9b322738d41f978428b23e7da01149eb57d47ac7a206ed1dea17eabc85697529",
+      "exact": true,
+      "gzipEncodeMs": 7.444652263075113,
+      "v2EncodeMs": 290.7105749472976,
+      "v3EncodeMs": 216.4806448854506,
+      "v3DecodeMs": 1.6447529196739197,
+      "modes": {
+        "raw": 171,
+        "repeat": 1,
+        "patch": 169
+      },
+      "periodicRuns": 170,
+      "runSample": [
+        [
+          53,
+          3396,
+          37,
+          "repeat"
+        ],
+        [
+          4717,
+          5084,
+          37,
+          "patch"
+        ],
+        [
+          11625,
+          2824,
+          37,
+          "patch"
+        ],
+        [
+          15499,
+          6649,
+          37,
+          "patch"
+        ],
+        [
+          23132,
+          1259,
+          37,
+          "patch"
+        ],
+        [
+          27242,
+          2590,
+          37,
+          "patch"
+        ],
+        [
+          32016,
+          4061,
+          37,
+          "patch"
+        ],
+        [
+          37488,
+          797,
+          37,
+          "patch"
+        ],
+        [
+          40732,
+          4101,
+          37,
+          "patch"
+        ],
+        [
+          47380,
+          4248,
+          37,
+          "patch"
+        ],
+        [
+          52903,
+          6996,
+          37,
+          "patch"
+        ],
+        [
+          61325,
+          4043,
+          37,
+          "patch"
+        ]
+      ]
+    },
+    {
+      "case": "sparse-defects",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "3c36344b07c4e9ce2843cd62819f449cc7587f9eec5b6868d147ca0707363146",
+      "gzipBytes": 5731,
+      "v2Bytes": 527411,
+      "v3Bytes": 15397,
+      "encodedSHA256": "56ea8201deaf22d67c4e5f386de0123b80910b9e47a1013e6145c6e263306e31",
+      "exact": true,
+      "gzipEncodeMs": 4.388553090393543,
+      "v2EncodeMs": 276.6110757365823,
+      "v3EncodeMs": 38.97409560158849,
+      "v3DecodeMs": 3.965740092098713,
+      "modes": {
+        "raw": 1024,
+        "repeat": 1023
+      },
+      "periodicRuns": 1023,
+      "runSample": [
+        [
+          1,
+          1020,
+          8,
+          "repeat"
+        ],
+        [
+          1022,
+          1020,
+          8,
+          "repeat"
+        ],
+        [
+          2043,
+          1020,
+          8,
+          "repeat"
+        ],
+        [
+          3064,
+          1020,
+          8,
+          "repeat"
+        ],
+        [
+          4085,
+          1020,
+          8,
+          "repeat"
+        ],
+        [
+          5106,
+          1020,
+          8,
+          "repeat"
+        ],
+        [
+          6127,
+          1020,
+          8,
+          "repeat"
+        ],
+        [
+          7148,
+          1020,
+          8,
+          "repeat"
+        ],
+        [
+          8169,
+          1020,
+          8,
+          "repeat"
+        ],
+        [
+          9190,
+          1020,
+          8,
+          "repeat"
+        ],
+        [
+          10211,
+          1020,
+          8,
+          "repeat"
+        ],
+        [
+          11232,
+          1020,
+          8,
+          "repeat"
+        ]
+      ]
+    },
+    {
+      "case": "random-1MiB",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "d3cc80f2e062094e9d161ffc51e71d96560a9d5a1c4712ab47e67d950f5e5d11",
+      "gzipBytes": 1048914,
+      "v2Bytes": 1048621,
+      "v3Bytes": 1048621,
+      "encodedSHA256": "82814f86926ec71536e42b7fa7a781a6f4a71e0c933929aa69c044b0098da781",
+      "exact": true,
+      "gzipEncodeMs": 23.478957824409008,
+      "v2EncodeMs": 332.5870828703046,
+      "v3EncodeMs": 801.3559761457145,
+      "v3DecodeMs": 1.1087162420153618,
+      "modes": {
+        "raw": 1
+      },
+      "periodicRuns": 0,
+      "runSample": []
+    },
+    {
+      "case": "repeat-1MiB",
+      "sourceBytes": 1048576,
+      "sourceSHA256": "3fa83f5be6609365a03513492630a10994adb31ef8368a140baff907b02cb92e",
+      "gzipBytes": 2595,
+      "v2Bytes": 64,
+      "v3Bytes": 64,
+      "encodedSHA256": "154edfa74cc1cf3a177973b8037a455d91c56b2849fab7deac62d832011c2e58",
+      "exact": true,
+      "gzipEncodeMs": 3.647914156317711,
+      "v2EncodeMs": 168.7651784159243,
+      "v3EncodeMs": 15.151239931583405,
+      "v3DecodeMs": 1.0339398868381977,
+      "modes": {
+        "repeat": 1
+      },
+      "periodicRuns": 1,
+      "runSample": [
+        [
+          0,
+          1048576,
+          18,
+          "repeat"
+        ]
+      ]
+    },
+    {
+      "case": "source-code",
+      "sourceBytes": 27929,
+      "sourceSHA256": "0015270627397b1b96786315b693dfe481bf601a35c478b044bd9ae8c14300e9",
+      "gzipBytes": 8116,
+      "v2Bytes": 27307,
+      "v3Bytes": 27307,
+      "encodedSHA256": "cd7a15bce57e0273643f8c87d44182210672d3f53af757a44b61243e386efe99",
+      "exact": true,
+      "gzipEncodeMs": 0.608525238931179,
+      "v2EncodeMs": 22.0563099719584,
+      "v3EncodeMs": 93.2809617370367,
+      "v3DecodeMs": 1.2451140210032463,
+      "modes": {
+        "token": 1
+      },
+      "periodicRuns": 0,
+      "runSample": []
+    },
+    {
+      "case": "odd-length",
+      "sourceBytes": 65537,
+      "sourceSHA256": "07a187472e3b2fd56ec31202e7c6eda9eb97690e9a80495fb9efa3326be72bb9",
+      "gzipBytes": 65575,
+      "v2Bytes": 65582,
+      "v3Bytes": 65582,
+      "encodedSHA256": "709f476e952b06d2c8b2d1ba7162652d28bed87649a585e8116f0e738dae7760",
+      "exact": true,
+      "gzipEncodeMs": 1.3801222667098045,
+      "v2EncodeMs": 21.59652905538678,
+      "v3EncodeMs": 50.276723224669695,
+      "v3DecodeMs": 0.0689416192471981,
+      "modes": {
+        "raw": 1
+      },
+      "periodicRuns": 0,
+      "runSample": []
+    },
+    {
+      "case": "empty",
+      "sourceBytes": 0,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gzipBytes": 20,
+      "v2Bytes": 40,
+      "v3Bytes": 39,
+      "encodedSHA256": "0d34023e31801465016670fef05fd9b0d13fd0b1432ff8c5e647643222b9b205",
+      "exact": true,
+      "gzipEncodeMs": 0.012721866369247437,
+      "v2EncodeMs": 0.017121899873018265,
+      "v3EncodeMs": 0.004744622856378555,
+      "v3DecodeMs": 0.0037169083952903748,
+      "modes": {},
+      "periodicRuns": 0,
+      "runSample": []
+    },
+    {
+      "case": "short",
+      "sourceBytes": 3,
+      "sourceSHA256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+      "gzipBytes": 23,
+      "v2Bytes": 45,
+      "v3Bytes": 44,
+      "encodedSHA256": "b794d3be725af6c822d1e87e55ccabef183afc2945a733162c5c8e34e4957cb1",
+      "exact": true,
+      "gzipEncodeMs": 0.005729030817747116,
+      "v2EncodeMs": 0.09732600301504135,
+      "v3EncodeMs": 0.022324267774820328,
+      "v3DecodeMs": 0.0055478885769844055,
+      "modes": {
+        "raw": 1
+      },
+      "periodicRuns": 0,
+      "runSample": []
+    }
+  ]
+}
