@@ -37,7 +37,17 @@
     "requiresLocalToolchainAndTrustSetup": true,
     "generalCompilerSpeedupEstablished": false,
     "integratedSecurityAndPerformanceAcceptancePassed": false,
-    "claimsScope": "See methodology for constrained benchmark interpretation; no general storage savings or build acceleration guarantee."
+    "claimsScope": "See methodology for constrained benchmark interpretation; no general storage savings or build acceleration guarantee.",
+    "buyerOwnedHarness": {
+      "url": "https://github.com/Joe-You-Know/constructive-runtime-methodology/tree/main/buyer-evaluation",
+      "costUSD": 0,
+      "offline": true,
+      "freeBaseline": "gzip-6",
+      "requiresBuyerProvidedCandidateArtifacts": true,
+      "commercialCodecIncluded": false,
+      "testsPassed": 5,
+      "defaultWithoutCandidateEvidence": "FREE_REFERENCE_UNTIL_MEASURED"
+    }
   },
   "discoveryFree": true,
   "commercialArtifactIncluded": false,
@@ -60,6 +70,13 @@
     "inboundDeliveryVerified": true,
     "verificationDate": "2026-11-27",
     "purpose": "Purchase inquiries, independent evaluations, and commercial communication.",
-    "outboundDeliveryVerified": false
+    "outboundDeliveryVerified": false,
+    "simplex": {
+      "address": "https://smp4.simplex.im/a#3jtqiVVBf8fGiXRU_jU7b2uMwIwnZC5y6wokuEMJJ-k",
+      "persistentIdentityVerified": true,
+      "inboundConversationVerified": false,
+      "channel": "SimpleX Chat",
+      "purpose": "Independent evaluation and purchase inquiries"
+    }
   }
 }
