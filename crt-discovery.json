@@ -22,12 +22,15 @@
   "price": {
     "currency": "USD",
     "oneTimeCents": 499,
-    "availability": "consult authoritativeProductStatus; do not attempt purchase when purchase_available is false",
+    "availability": "Public live checkout verified; consult authoritativeProductStatus immediately before purchase.",
     "updatesSubscriptionActive": false,
     "paymentModel": "stripe_managed_payments",
     "managedPaymentsLiveEligibilityVerified": true,
-    "purchaseAvailableAtLastCheck": false,
-    "taxScope": "Stripe covers eligible indirect tax jurisdictions; see authoritativeProductStatus for availability"
+    "purchaseAvailableAtLastCheck": true,
+    "taxScope": "Stripe Managed Payments for supported indirect-tax jurisdictions only; seller reports unsupported-country restriction configured by Stripe Support.",
+    "lastVerifiedDate": "2026-11-27",
+    "managedTaxScopeAccepted": true,
+    "taxBehavior": "exclusive"
   },
   "evaluation": {
     "experimental": true,
@@ -38,5 +41,17 @@
   },
   "discoveryFree": true,
   "commercialArtifactIncluded": false,
-  "earlierApacheRightsPreserved": true
+  "earlierApacheRightsPreserved": true,
+  "releaseAddendum": {
+    "url": "https://joe-you-know-crt-commerce.hf.space/release/v1.5.0/addendum.json",
+    "sha256": "8d230b5153d7229b2ccd9714202689918d32c857b4ec91366f1517bfa20ffed1"
+  },
+  "purchase": {
+    "status": "live",
+    "checkoutUrl": "https://joe-you-know-crt-commerce.hf.space/",
+    "checkoutHostedBy": "Stripe",
+    "license": "perpetual purchased version, personal and internal commercial use under included license",
+    "instructions": "Consult offer.json and release addendum; initiate hosted checkout through storefront. Buyer must independently authorize payment; retain private recovery claim. Do not publish claim tokens.",
+    "independentPaidPurchaseVerified": false
+  }
 }
