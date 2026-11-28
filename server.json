@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.joe-you-know/constructive-runtime-evaluation",
+  "name": "io.github.Joe-You-Know/constructive-runtime-evaluation",
   "title": "ConstructiveRT Evaluation",
   "description": "Free byte-exact CRTG4 vs gzip-6 research evaluation, benchmarks and experimental runtime discovery.",
   "version": "0.1.0",
