@@ -10,6 +10,10 @@ import re
 import sys
 import tempfile
 import time
+import threading
+import uuid
+from collections import Counter
+from datetime import datetime, timezone
 import urllib.request
 from pathlib import Path
 
@@ -33,6 +37,32 @@ _zip.write_bytes(_archive)
 sys.path.insert(0, str(_zip))
 import grammar_v4 as codec
 REPORT = json.loads((ROOT / "benchmark-summary.json").read_text())
+
+# Only aggregate counters; no source bytes, hashes, addresses, identifiers, or user agents.
+_USAGE_EPOCH = uuid.uuid4().hex
+_USAGE_STARTED = datetime.now(timezone.utc).isoformat()
+_USAGE_LOCK = threading.Lock()
+_PURPOSES = ("unspecified", "external-evaluation", "operator-test")
+_USAGE = {p: Counter() for p in _PURPOSES}
+
+def _purpose(purpose):
+    if purpose not in _PURPOSES:
+        raise ValueError("unsupported declared purpose")
+    return purpose
+
+def _count(purpose, event):
+    with _USAGE_LOCK:
+        _USAGE[_purpose(purpose)][event] += 1
+
+def get_usage_summary() -> dict:
+    """Read anonymous process-lifetime event counters without incrementing them. Caller purpose is self-declared, not verified identity."""
+    with _USAGE_LOCK:
+        counts = {p: dict(c) for p, c in _USAGE.items()}
+    return {"schema": "crt-eval-usage-v1", "epoch": _USAGE_EPOCH, "started_at": _USAGE_STARTED,
+            "as_of": datetime.now(timezone.utc).isoformat(), "counts": counts,
+            "coverage": "Since this process started; resets on restart, no historical reconstruction. Counts are events, not unique people or verified independent buyers. All declared purposes are unverified.",
+            "privacy": "Application records only aggregate counts; no input data, hashes, IP, user agent, or caller ID. Host request logging is outside this scope."}
+
 
 class NoRedirect(urllib.request.HTTPRedirectHandler):
     def redirect_request(self, *args, **kwargs):
@@ -124,9 +154,13 @@ def _measure(d: bytes) -> dict:
             "codec_modes": stats["modes"], "periodic_runs": stats["periodicRuns"], "exceptions": stats["exceptions"],
             "purchase_recommendation": "None; free research result does not establish paid runtime suitability."}
 
-def evaluate_workload(kind: str = "sparse-defects", payload: str = "", size_bytes: int = 65536, seed: int = 54) -> dict:
+def evaluate_workload(kind: str = "sparse-defects", payload: str = "", size_bytes: int = 65536, seed: int = 54, purpose: str = "unspecified") -> dict:
     """Compare CRTG4 and gzip-6 on nonconfidential text/base64 or synthetic fixtures (max 64 KiB). No input storage by this app; public hosting may log requests."""
-    return _measure(_source(kind, payload, size_bytes, seed))
+    _purpose(purpose)
+    result = _measure(_source(kind, payload, size_bytes, seed))
+    _count(purpose, "evaluation_completed")
+    _count(purpose, "evaluation_size_" + {"CRTG4": "win", "gzip-6": "loss", "tie": "tie"}[result["size_preference"]])
+    return result
 
 def verify_reconstruction(source_base64: str, expected_sha256: str) -> dict:
     """Reconstruct a fresh CRTG4 stream from public source bytes and compare an independently supplied SHA-256. Does not accept arbitrary encoded streams."""
@@ -162,24 +196,64 @@ def get_purchase_requirements() -> dict:
             "research_codec_included_in_paid_offer": False, "automatic_purchase": False,
             "offer": OFFER, "addendum": STOREFRONT+"release/v1.5.0/addendum.json", "scope": SCOPE}
 
-def get_purchase_link() -> dict:
+def get_purchase_link(purpose: str = "unspecified") -> dict:
     """Return an attributed public storefront URL only if the fixed live offer reports purchasing available. Never posts to checkout."""
+    _purpose(purpose)
+    _count(purpose, "purchase_link_requested")
     status = get_product_status()
     if status.get("status") != "retrieved" or status["offer"].get("purchase_available") is not True:
         return {"available": None if status.get("status") != "retrieved" else False, "url": None, "source": OFFER}
+    _count(purpose, "purchase_link_returned")
     return {"available": True, "url": STOREFRONT+"?src=eval-mcp", "source": OFFER, "scope": SCOPE,
             "warning": "Separate experimental compiler runtime; no purchase or buyer recommendation is implied."}
+
+def assess_runtime_fit(platform: str = "other", compatible_compiler_workflow: bool = False,
+                       toolchain_ready: bool = False, accepts_experimental_limits: bool = False,
+                       requires_production_security: bool = True, buyer_authorized: bool = False,
+                       wants_experimental_evaluation: bool = False, purpose: str = "unspecified") -> dict:
+    """Assess declared fit for the separate paid experimental compiler runtime, not CRTG4. Returns a storefront only for a compatible, explicitly authorized experimental evaluation. No order creation."""
+    _purpose(purpose)
+    flags = (compatible_compiler_workflow, toolchain_ready, accepts_experimental_limits,
+             requires_production_security, buyer_authorized, wants_experimental_evaluation)
+    if any(type(v) is not bool for v in flags):
+        raise ValueError("explicit boolean answers required")
+    if platform not in ("Windows x64", "other", "unknown"):
+        raise ValueError("unsupported platform answer")
+    blockers = []
+    if platform != "Windows x64": blockers.append("Windows x64 required")
+    if not compatible_compiler_workflow: blockers.append("compatible compiler workflow not established")
+    if not toolchain_ready: blockers.append("local toolchain and trust setup not ready")
+    if not accepts_experimental_limits: blockers.append("experimental limitations not accepted")
+    if requires_production_security: blockers.append("integrated production security acceptance is not established")
+    if not buyer_authorized: blockers.append("buyer payment authorization not declared")
+    if not wants_experimental_evaluation: blockers.append("no explicit intent to evaluate paid runtime")
+    _count(purpose, "runtime_fit_assessed")
+    result = {"scope": SCOPE, "self_declared": True, "eligible_to_consider": not blockers, "blockers": blockers,
+              "url": None, "warning": "A fit result is not a purchase recommendation, proof of buyer authorization, or evidence of runtime savings. Review the release addendum before a separate, voluntary purchase.",
+              "addendum": STOREFRONT+"release/v1.5.0/addendum.json", "free_evaluation": ARTIFACTS}
+    if blockers:
+        _count(purpose, "runtime_fit_not_ready")
+        return result
+    _count(purpose, "runtime_fit_declared_ready")
+    status = get_product_status()
+    if status.get("status") == "retrieved" and status["offer"].get("purchase_available") is True:
+        result["url"] = STOREFRONT+"?src=eval-mcp-fit"
+        _count(purpose, "qualified_link_returned")
+    else:
+        result["offer_unavailable"] = True
+    return result
 
 def build_ui():
     import gradio as gr
     with gr.Blocks(title="ConstructiveRT Evaluation MCP", analytics_enabled=False) as demo:
-        gr.Markdown("# ConstructiveRT — free research evaluation\nCompare byte-exact CRTG4 and gzip-6. Maximum public input: 64 KiB. Use only nonconfidential data. No purchase needed. The paid Windows compiler runtime is separate. No input persistence is implemented; hosting may retain request logs.")
+        gr.Markdown("# ConstructiveRT — free research evaluation\nCompare byte-exact CRTG4 and gzip-6. Maximum public input: 64 KiB. Use only nonconfidential data. No purchase needed. The paid Windows compiler runtime is separate. No input persistence is implemented; hosting may retain request logs. Anonymous aggregate event counts reset on restart; declared purpose is optional and unverified.")
         kind = gr.Dropdown(["sparse-defects","repeat","mixed","random","text","base64"], value="sparse-defects", label="Workload")
         payload = gr.Textbox(label="Public text or canonical base64 (blank for fixtures)")
         size = gr.Number(value=65536, precision=0, label="Synthetic bytes")
         seed = gr.Number(value=54, precision=0, label="Synthetic seed")
+        purpose = gr.Dropdown(list(_PURPOSES), value="unspecified", label="Optional declared purpose (not identity verification)")
         out = gr.JSON(label="Evaluation")
-        gr.Button("Evaluate").click(evaluate_workload,[kind,payload,size,seed],out,api_name="evaluate_workload",concurrency_id="codec",concurrency_limit=1)
+        gr.Button("Evaluate").click(evaluate_workload,[kind,payload,size,seed,purpose],out,api_name="evaluate_workload",concurrency_id="codec",concurrency_limit=1)
         with gr.Accordion("Verification and economics", open=False):
             s = gr.Textbox(label="Public source base64")
             h = gr.Textbox(label="Expected SHA-256")
@@ -192,7 +266,20 @@ def build_ui():
             months = gr.Number(value=1,precision=0,label="Months")
             e = gr.JSON()
             gr.Button("Estimate").click(calculate_storage_economics,[g,c,copies,rate,months],e,api_name="calculate_storage_economics")
-        for title, fn in [("Live product status",get_product_status),("Published benchmarks",get_benchmark_results),("Purchase requirements",get_purchase_requirements),("Purchase link",get_purchase_link)]:
+        with gr.Accordion("Separate paid runtime suitability",open=False):
+            plat = gr.Dropdown(["Windows x64","other","unknown"],value="unknown",label="Platform")
+            workflow = gr.Checkbox(label="I have a compatible compiler workflow",value=False)
+            toolchain = gr.Checkbox(label="Local toolchain and trust setup are ready",value=False)
+            experimental = gr.Checkbox(label="I accept the experimental limitations",value=False)
+            production = gr.Checkbox(label="I require production security acceptance",value=True)
+            authorized = gr.Checkbox(label="I have independent authorization to pay",value=False)
+            intent = gr.Checkbox(label="I intend to evaluate the separate paid runtime",value=False)
+            fit = gr.JSON()
+            gr.Button("Assess runtime fit").click(assess_runtime_fit,[plat,workflow,toolchain,experimental,production,authorized,intent,purpose],fit,api_name="assess_runtime_fit")
+        with gr.Accordion("Purchase link",open=False):
+            link = gr.JSON()
+            gr.Button("Purchase link").click(get_purchase_link,[purpose],link,api_name="get_purchase_link")
+        for title, fn in [("Live product status",get_product_status),("Published benchmarks",get_benchmark_results),("Purchase requirements",get_purchase_requirements),("Anonymous usage summary",get_usage_summary)]:
             with gr.Accordion(title,open=False):
                 j = gr.JSON()
                 gr.Button(title).click(fn,[],j,api_name=fn.__name__)

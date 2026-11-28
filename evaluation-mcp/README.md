@@ -28,3 +28,7 @@ The trial archive is stored as base64 with pinned SHA-256, and the grammar modul
 get_product_status, get_benchmark_results, evaluate_workload, verify_reconstruction, calculate_storage_economics, get_purchase_requirements, get_purchase_link.
 
 No purchase or write capability. No commerce secrets. Attribution tag `eval-mcp` applies only to a storefront URL returned to a visitor; it does not identify a buyer. The MCP is experimental. The hosted instance must pass independent deployment checks before promotion.
+
+## Anonymous evaluation funnel
+
+Optional caller-declared purpose is `unspecified`, `external-evaluation`, or `operator-test`. `get_usage_summary` reads process-lifetime aggregate event counts without changing them. Counts are not unique visitors, verified independent buyers, or conversions; they reset on restart, and missing intervals are unknown. No payloads, hashes, IPs or caller IDs are retained by the application. Hosting may log requests. `assess_runtime_fit` gates a separate tagged storefront link on declared compatibility, toolchain readiness, experimental acceptance, no production-security requirement, buyer authorization and explicit evaluation intent. This is not proof of authorization or a performance recommendation. The `eval-mcp-fit` attribution tag is distinct from `eval-mcp`, not proof of customer identity or purchase. No checkout is created.

@@ -42,6 +42,27 @@ class EvaluationTests(unittest.TestCase):
             self.assertIsNone(app.get_purchase_link()["url"])
         with patch("app.get_product_status",return_value={"status":"retrieved","offer":{"purchase_available":True}}):
             self.assertTrue(app.get_purchase_link()["url"].endswith("?src=eval-mcp"))
+    def test_usage_counters(self):
+        start=app.get_usage_summary()
+        old=start["counts"]["operator-test"].get("evaluation_completed",0)
+        app.evaluate_workload("repeat","",512,54,"operator-test")
+        end=app.get_usage_summary()
+        self.assertEqual(end["epoch"],start["epoch"])
+        self.assertEqual(end["counts"]["operator-test"]["evaluation_completed"],old+1)
+        self.assertEqual(app.get_usage_summary()["counts"],end["counts"])
+        self.assertNotIn("source_sha256",str(end))
+        with self.assertRaises(ValueError):
+            app.evaluate_workload("repeat","",512,54,"fake-purpose")
+    def test_runtime_fit_gate(self):
+        with patch("app.get_product_status",return_value={"status":"retrieved","offer":{"purchase_available":True}}):
+            self.assertIsNone(app.assess_runtime_fit()["url"])
+            self.assertIsNone(app.assess_runtime_fit("Windows x64",True,True,True,True,True,True)["url"])
+            self.assertIsNone(app.assess_runtime_fit("Windows x64",True,True,True,False,False,True)["url"])
+            fit=app.assess_runtime_fit("Windows x64",True,True,True,False,True,True,"operator-test")
+            self.assertTrue(fit["eligible_to_consider"])
+            self.assertTrue(fit["url"].endswith("?src=eval-mcp-fit"))
+        with patch("app.get_product_status",return_value={"status":"unavailable"}):
+            self.assertIsNone(app.assess_runtime_fit("Windows x64",True,True,True,False,True,True)["url"])
     def test_pinned_report(self):
         r=app.get_benchmark_results()
         self.assertEqual(len(r["rows"]),23)
