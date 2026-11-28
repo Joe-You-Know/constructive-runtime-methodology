@@ -1,0 +1,57 @@
+name: CRT evaluation MCP
+on:
+  push:
+    paths:
+      - 'evaluation-mcp/**'
+      - '.github/workflows/crt-evaluation-mcp.yml'
+  workflow_dispatch:
+    inputs:
+      deploy:
+        description: Deploy validated files to the public CPU Basic Space
+        type: boolean
+        default: false
+      expected_hf_sha:
+        description: Reviewed current Space revision
+        type: string
+        required: false
+permissions:
+  contents: read
+concurrency:
+  group: crt-evaluation-mcp
+  cancel-in-progress: false
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - working-directory: evaluation-mcp
+        run: |
+          python -m py_compile app.py grammar_v3.py grammar_v4.py test_evaluation.py deploy.py
+          python -m unittest -v test_evaluation
+      - working-directory: evaluation-mcp
+        run: |
+          python -m pip install -r requirements.txt
+          python -c "import app; assert app.build_ui() is not None"
+  deploy:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.deploy && github.ref == 'refs/heads/main' }}
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'huggingface_hub>=0.30,<2'
+      - name: Deploy validated public code, only to the evaluation Space
+        working-directory: evaluation-mcp
+        env:
+          HF_TOKEN: ${{ secrets.CRT_EVALUATION_HF_TOKEN }}
+          EXPECTED_HF_SHA: ${{ inputs.expected_hf_sha }}
+        run: |
+          test -n "$HF_TOKEN"
+          python deploy.py --expected-sha "$EXPECTED_HF_SHA"
