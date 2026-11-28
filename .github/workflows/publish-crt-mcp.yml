@@ -31,7 +31,7 @@ jobs:
           m=json.loads(Path("server.json").read_text())
           url=m["remotes"][0]["url"]
           assert url=="https://joe-you-know-crt-evaluation-mcp.hf.space/gradio_api/mcp/"
-          assert m["name"]=="io.github.joe-you-know/constructive-runtime-evaluation"
+          assert m["name"]=="io.github.Joe-You-Know/constructive-runtime-evaluation"
           assert m["version"]=="0.1.0"
           def rpc(body,protocol="2025-03-26",session=None):
               headers={"Content-Type":"application/json","Accept":"application/json, text/event-stream","MCP-Protocol-Version":protocol}
