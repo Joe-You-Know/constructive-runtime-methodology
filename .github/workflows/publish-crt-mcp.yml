@@ -1,0 +1,100 @@
+name: Publish CRT Evaluation MCP registry entry
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/publish-crt-mcp.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: crt-mcp-registry
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      MCP_PUBLISHER_VERSION: v1.8.21
+      REGISTRY: https://registry.modelcontextprotocol.io
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - name: Verify public streamable HTTP MCP and deduplicate registry entry
+        run: |
+          python - <<'PY'
+          import json, urllib.request, urllib.parse, os
+          from pathlib import Path
+          m=json.loads(Path("server.json").read_text())
+          url=m["remotes"][0]["url"]
+          assert url=="https://joe-you-know-crt-evaluation-mcp.hf.space/gradio_api/mcp/"
+          assert m["name"]=="io.github.joe-you-know/constructive-runtime-evaluation"
+          assert m["version"]=="0.1.0"
+          def rpc(body,protocol="2025-03-26",session=None):
+              headers={"Content-Type":"application/json","Accept":"application/json, text/event-stream","MCP-Protocol-Version":protocol}
+              if session: headers["Mcp-Session-Id"]=session
+              req=urllib.request.Request(url,data=json.dumps(body).encode(),headers=headers)
+              with urllib.request.urlopen(req,timeout=60) as r:
+                  session=r.headers.get("Mcp-Session-Id",session)
+                  if "text/event-stream" in r.headers.get("Content-Type",""):
+                      for line in r:
+                          if line.startswith(b"data:"):
+                              d=json.loads(line[5:])
+                              if d.get("id")==body.get("id"):return d,session
+                      raise RuntimeError("No matching MCP response")
+                  raw=r.read(1048576)
+                  return (json.loads(raw) if raw else {}),session
+          init,session=rpc({"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-03-26","capabilities":{},"clientInfo":{"name":"crt-public-registry-preflight","version":"0.1.0"}}})
+          protocol=init["result"]["protocolVersion"]
+          rpc({"jsonrpc":"2.0","method":"notifications/initialized"},protocol,session)
+          listing,_=rpc({"jsonrpc":"2.0","id":2,"method":"tools/list","params":{}},protocol,session)
+          tools=[t["name"] for t in listing["result"]["tools"]]
+          required=("evaluate_workload","verify_reconstruction","calculate_storage_economics","get_product_status","get_benchmark_results","get_purchase_requirements","get_purchase_link")
+          assert all(any(x.replace("-","_").endswith(y) for x in tools) for y in required),tools
+          print("Public MCP handshake and seven tools verified:",tools)
+          query=os.environ["REGISTRY"]+"/v0.1/servers?"+urllib.parse.urlencode({"search":m["name"],"limit":100})
+          with urllib.request.urlopen(query,timeout=30) as r:
+              d=json.load(r)
+          exact=[x for x in d["servers"] if x.get("server",{}).get("name","").lower()==m["name"].lower() and x["server"].get("version")==m["version"]]
+          already=bool(exact)
+          if already:
+              assert len(exact)==1 and exact[0]["server"]["remotes"]==m["remotes"],"Existing version differs"
+              print("Identical version already exists; no duplicate publication")
+          with open(os.environ["GITHUB_ENV"],"a") as f:f.write("ALREADY_PUBLISHED="+str(already).lower()+"\n")
+          PY
+      - name: Install pinned official publisher
+        if: env.ALREADY_PUBLISHED != 'true'
+        run: |
+          set -euo pipefail
+          curl --fail --location --silent --show-error --max-time 60 -o publisher.tar.gz "https://github.com/modelcontextprotocol/registry/releases/download/$MCP_PUBLISHER_VERSION/mcp-publisher_linux_amd64.tar.gz"
+          echo 'ca2e5b24e8fc2718be4bb58ab086b39b7d60c79840c24b2057bc3f36d6ab2a59  publisher.tar.gz' | sha256sum --check
+          tar xzf publisher.tar.gz mcp-publisher
+          ./mcp-publisher validate server.json
+      - name: Authenticate via GitHub OIDC and publish
+        if: env.ALREADY_PUBLISHED != 'true'
+        run: |
+          ./mcp-publisher login github-oidc
+          ./mcp-publisher publish server.json
+      - name: Independently read registry record
+        run: |
+          python - <<'PY'
+          import json, urllib.parse, urllib.request, os, time
+          from pathlib import Path
+          m=json.loads(Path("server.json").read_text())
+          url=os.environ["REGISTRY"]+"/v0.1/servers?"+urllib.parse.urlencode({"search":m["name"],"limit":100})
+          for i in range(5):
+              with urllib.request.urlopen(url,timeout=30) as r:d=json.load(r)
+              for x in d["servers"]:
+                  s=x["server"]
+                  if s["name"].lower()==m["name"].lower() and s["version"]==m["version"]:
+                      assert s["remotes"]==m["remotes"]
+                      official=x.get("_meta",{}).get("io.modelcontextprotocol.registry/official",{})
+                      assert official.get("status")=="active",official
+                      print("REGISTRY_VERIFIED",json.dumps(x))
+                      raise SystemExit(0)
+              time.sleep(2)
+          raise SystemExit("Registry readback not yet verified")
+          PY
