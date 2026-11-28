@@ -1,0 +1,48 @@
+name: CRT evaluation one-time deployment
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/crt-evaluation-bootstrap.yml']
+permissions:
+  contents: read
+concurrency:
+  group: crt-evaluation-mcp
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '951ffd4e6be865890eb4e5f3151b25b56b7a140e'
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'huggingface_hub>=0.30,<2'
+      - name: Verify untouched starter state and deploy pinned validated source
+        working-directory: evaluation-mcp
+        env:
+          HF_TOKEN: ${{ secrets.CRT_EVALUATION_HF_TOKEN }}
+        run: |
+          python - <<'PY'
+          import os, sys, subprocess
+          from pathlib import Path
+          from huggingface_hub import HfApi, hf_hub_download
+          if not os.environ.get("HF_TOKEN"):
+              raise SystemExit("Dedicated CRT_EVALUATION_HF_TOKEN missing; no deployment")
+          api = HfApi()
+          repo = "joe-you-know/crt-evaluation-mcp"
+          info = api.repo_info(repo_id=repo, repo_type="space")
+          expected = {"README.md":"---\ntitle: Crt Evaluation Mcp\nemoji: 📊\ncolorFrom: gray\ncolorTo: yellow\nsdk: gradio\nsdk_version: 6.32.0\npython_version: '3.13'\napp_file: app.py\npinned: false\n---\n\nCheck out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference\n",".gitattributes":"*.7z filter=lfs diff=lfs merge=lfs -text\n*.arrow filter=lfs diff=lfs merge=lfs -text\n*.bin filter=lfs diff=lfs merge=lfs -text\n*.bz2 filter=lfs diff=lfs merge=lfs -text\n*.ckpt filter=lfs diff=lfs merge=lfs -text\n*.ftz filter=lfs diff=lfs merge=lfs -text\n*.gz filter=lfs diff=lfs merge=lfs -text\n*.h5 filter=lfs diff=lfs merge=lfs -text\n*.joblib filter=lfs diff=lfs merge=lfs -text\n*.lfs.* filter=lfs diff=lfs merge=lfs -text\n*.mlmodel filter=lfs diff=lfs merge=lfs -text\n*.model filter=lfs diff=lfs merge=lfs -text\n*.msgpack filter=lfs diff=lfs merge=lfs -text\n*.npy filter=lfs diff=lfs merge=lfs -text\n*.npz filter=lfs diff=lfs merge=lfs -text\n*.onnx filter=lfs diff=lfs merge=lfs -text\n*.ot filter=lfs diff=lfs merge=lfs -text\n*.parquet filter=lfs diff=lfs merge=lfs -text\n*.pb filter=lfs diff=lfs merge=lfs -text\n*.pickle filter=lfs diff=lfs merge=lfs -text\n*.pkl filter=lfs diff=lfs merge=lfs -text\n*.pt filter=lfs diff=lfs merge=lfs -text\n*.pth filter=lfs diff=lfs merge=lfs -text\n*.rar filter=lfs diff=lfs merge=lfs -text\n*.safetensors filter=lfs diff=lfs merge=lfs -text\nsaved_model/**/* filter=lfs diff=lfs merge=lfs -text\n*.tar.* filter=lfs diff=lfs merge=lfs -text\n*.tar filter=lfs diff=lfs merge=lfs -text\n*.tflite filter=lfs diff=lfs merge=lfs -text\n*.tgz filter=lfs diff=lfs merge=lfs -text\n*.wasm filter=lfs diff=lfs merge=lfs -text\n*.xz filter=lfs diff=lfs merge=lfs -text\n*.zip filter=lfs diff=lfs merge=lfs -text\n*.zst filter=lfs diff=lfs merge=lfs -text\n*tfevents* filter=lfs diff=lfs merge=lfs -text\n"}
+          files = set(api.list_repo_files(repo, repo_type="space", revision=info.sha))
+          if info.private or files != set(expected):
+              raise SystemExit("Space is not in reviewed initial state; no deployment")
+          for name, content in expected.items():
+              actual = Path(hf_hub_download(repo, name, repo_type="space", revision=info.sha)).read_bytes()
+              if actual != content.encode("utf-8"):
+                  raise SystemExit("Starter file changed; no deployment")
+          print("Verified starter revision:", info.sha)
+          subprocess.run([sys.executable, "deploy.py", "--expected-sha", info.sha], check=True)
+          PY
