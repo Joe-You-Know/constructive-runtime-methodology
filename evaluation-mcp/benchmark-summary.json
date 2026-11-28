@@ -1,0 +1,292 @@
+{
+  "sourceCommit": "429f3dcf6b9d280836c527b02652e524fe9af2e5",
+  "scope": "single in-memory run, encoder search included, fixed order; no disk or transport",
+  "commercialRuntimeEvaluated": false,
+  "primaryRoundTrips": 23,
+  "extraRoundTrips": 8,
+  "randomizedRoundTrips": 250,
+  "negativeControls": 124,
+  "rows": [
+    {
+      "case": "mixed-512-20261127",
+      "sourceBytes": 1048576,
+      "gzipBytes": 536849,
+      "v3Bytes": 534096,
+      "v4Bytes": 534096,
+      "exact": true,
+      "sourceSHA256": "921d5c96ea9d15760e949ea40006428051b970b4fa8bb2e432031fd122097adf"
+    },
+    {
+      "case": "mixed-512-20261128",
+      "sourceBytes": 1048576,
+      "gzipBytes": 536859,
+      "v3Bytes": 533964,
+      "v4Bytes": 533964,
+      "exact": true,
+      "sourceSHA256": "5a6b8c186d7c6f4b9a791d1d8e4d3ec4b0b0399ae35ccca3b08bde9fff9303cf"
+    },
+    {
+      "case": "mixed-512-20261129",
+      "sourceBytes": 1048576,
+      "gzipBytes": 536856,
+      "v3Bytes": 533966,
+      "v4Bytes": 533966,
+      "exact": true,
+      "sourceSHA256": "a5ac5fb8370c1c8e4f384b160d6978a6adf4a6973f298ce25a5d5c6899efc229"
+    },
+    {
+      "case": "mixed-4096-20261127",
+      "sourceBytes": 1048576,
+      "gzipBytes": 530379,
+      "v3Bytes": 525575,
+      "v4Bytes": 525575,
+      "exact": true,
+      "sourceSHA256": "f67ea20894348c717a8edb03c2f62cf2d6f5e7b7e22ed94c536816d959a9504e"
+    },
+    {
+      "case": "mixed-4096-20261128",
+      "sourceBytes": 1048576,
+      "gzipBytes": 530363,
+      "v3Bytes": 525530,
+      "v4Bytes": 525530,
+      "exact": true,
+      "sourceSHA256": "a4506209c1184827b432075d042a2f97d9b3c0b2f44454acb7e12197bffeb56d"
+    },
+    {
+      "case": "mixed-4096-20261129",
+      "sourceBytes": 1048576,
+      "gzipBytes": 530380,
+      "v3Bytes": 525530,
+      "v4Bytes": 525530,
+      "exact": true,
+      "sourceSHA256": "b82a02ec534e1a8d93071e636036fabf053132e50ebdf7a34d64def66a0dac26"
+    },
+    {
+      "case": "mixed-65536-20261127",
+      "sourceBytes": 1048576,
+      "gzipBytes": 527905,
+      "v3Bytes": 524440,
+      "v4Bytes": 524440,
+      "exact": true,
+      "sourceSHA256": "25800ce625ace147ab02722fb79a54f0e15b9ca05a7872b66abe28d250a562b3"
+    },
+    {
+      "case": "mixed-65536-20261128",
+      "sourceBytes": 1048576,
+      "gzipBytes": 527905,
+      "v3Bytes": 524440,
+      "v4Bytes": 524440,
+      "exact": true,
+      "sourceSHA256": "70a71dbc1e6ad815c06fa648bf37bfdeb97fe7e214da467176a6421cb7cd89d5"
+    },
+    {
+      "case": "mixed-65536-20261129",
+      "sourceBytes": 1048576,
+      "gzipBytes": 527900,
+      "v3Bytes": 524440,
+      "v4Bytes": 524440,
+      "exact": true,
+      "sourceSHA256": "bb10db317696c9a4fa6870a23d1c5b496deb26751d5333dc1ae66883445d3fdf"
+    },
+    {
+      "case": "shifted-137",
+      "sourceBytes": 1048576,
+      "gzipBytes": 530267,
+      "v3Bytes": 525398,
+      "v4Bytes": 525398,
+      "exact": true,
+      "sourceSHA256": "c6067e6a0ec1db40914821efa9de5d3d84fae3bd91bbb185b57947b622cc7975"
+    },
+    {
+      "case": "shifted-1",
+      "sourceBytes": 1048576,
+      "gzipBytes": 536873,
+      "v3Bytes": 534015,
+      "v4Bytes": 534015,
+      "exact": true,
+      "sourceSHA256": "b33f6226529f1306860cde51b4344697d98adf31438eb6816b55f5ad189ddd94"
+    },
+    {
+      "case": "shifted-251",
+      "sourceBytes": 1048576,
+      "gzipBytes": 527893,
+      "v3Bytes": 524443,
+      "v4Bytes": 524443,
+      "exact": true,
+      "sourceSHA256": "76db7774d3a3a58305594c5581175d1370258e215a2209e966843007c3591e22"
+    },
+    {
+      "case": "irregular-20261131",
+      "sourceBytes": 1048576,
+      "gzipBytes": 535410,
+      "v3Bytes": 530919,
+      "v4Bytes": 530919,
+      "exact": true,
+      "sourceSHA256": "72b66854876c0479f81edb206da0ac0377b44060a41a1e13e59599d3d6c70d49"
+    },
+    {
+      "case": "irregular-20261132",
+      "sourceBytes": 1048576,
+      "gzipBytes": 532030,
+      "v3Bytes": 527544,
+      "v4Bytes": 527544,
+      "exact": true,
+      "sourceSHA256": "054af9d34104989ece8720239ab09c0e78d377d8546394abdf9c6a8a1dfb4843"
+    },
+    {
+      "case": "irregular-20261133",
+      "sourceBytes": 1048576,
+      "gzipBytes": 519226,
+      "v3Bytes": 514616,
+      "v4Bytes": 514616,
+      "exact": true,
+      "sourceSHA256": "56ee5e806a93f6324728e4536a1ac7ab76710416e5c6c710e5113de6eefb24d3"
+    },
+    {
+      "case": "changing-motif",
+      "sourceBytes": 887202,
+      "gzipBytes": 252448,
+      "v3Bytes": 247475,
+      "v4Bytes": 247475,
+      "exact": true,
+      "sourceSHA256": "cbc78c5f4ea4115af40b7ab778b800759666bb0d748f83080555658b9279c7d1"
+    },
+    {
+      "case": "sparse-defects",
+      "sourceBytes": 1048576,
+      "gzipBytes": 5731,
+      "v3Bytes": 15397,
+      "v4Bytes": 3129,
+      "exact": true,
+      "sourceSHA256": "3c36344b07c4e9ce2843cd62819f449cc7587f9eec5b6868d147ca0707363146"
+    },
+    {
+      "case": "random-1MiB",
+      "sourceBytes": 1048576,
+      "gzipBytes": 1048914,
+      "v3Bytes": 1048621,
+      "v4Bytes": 1048621,
+      "exact": true,
+      "sourceSHA256": "d3cc80f2e062094e9d161ffc51e71d96560a9d5a1c4712ab47e67d950f5e5d11"
+    },
+    {
+      "case": "repeat-1MiB",
+      "sourceBytes": 1048576,
+      "gzipBytes": 2595,
+      "v3Bytes": 64,
+      "v4Bytes": 64,
+      "exact": true,
+      "sourceSHA256": "3fa83f5be6609365a03513492630a10994adb31ef8368a140baff907b02cb92e"
+    },
+    {
+      "case": "source-code",
+      "sourceBytes": 27929,
+      "gzipBytes": 8116,
+      "v3Bytes": 27307,
+      "v4Bytes": 27307,
+      "exact": true,
+      "sourceSHA256": "0015270627397b1b96786315b693dfe481bf601a35c478b044bd9ae8c14300e9"
+    },
+    {
+      "case": "odd-length",
+      "sourceBytes": 65537,
+      "gzipBytes": 65575,
+      "v3Bytes": 65582,
+      "v4Bytes": 65582,
+      "exact": true,
+      "sourceSHA256": "07a187472e3b2fd56ec31202e7c6eda9eb97690e9a80495fb9efa3326be72bb9"
+    },
+    {
+      "case": "empty",
+      "sourceBytes": 0,
+      "gzipBytes": 20,
+      "v3Bytes": 39,
+      "v4Bytes": 39,
+      "exact": true,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "short",
+      "sourceBytes": 3,
+      "gzipBytes": 23,
+      "v3Bytes": 44,
+      "v4Bytes": 44,
+      "exact": true,
+      "sourceSHA256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+    }
+  ],
+  "extraRows": [
+    {
+      "case": "defects-every-16",
+      "sourceBytes": 1048576,
+      "gzipBytes": 124454,
+      "v3Bytes": 1035347,
+      "v4Bytes": 131058,
+      "exact": true,
+      "sourceSHA256": "cc07c5a38ffcf1de45b2aa2a92e2b572364ecefff25fe96126f4ec3d7cbd4397"
+    },
+    {
+      "case": "defects-every-64",
+      "sourceBytes": 1048576,
+      "gzipBytes": 38944,
+      "v3Bytes": 102401,
+      "v4Bytes": 32702,
+      "exact": true,
+      "sourceSHA256": "1f903e5330f3ab16c55a11ecdd673e9c31cab75c4e3a21c617c0c43a4b87905b"
+    },
+    {
+      "case": "defects-every-256",
+      "sourceBytes": 1048576,
+      "gzipBytes": 15230,
+      "v3Bytes": 28581,
+      "v4Bytes": 12285,
+      "exact": true,
+      "sourceSHA256": "0ddbca5a2ee8fb1cda028f60e06331b7d8b1c2dab7f6cd5378cc18b9cdee8573"
+    },
+    {
+      "case": "defects-every-4096",
+      "sourceBytes": 1048576,
+      "gzipBytes": 2647,
+      "v3Bytes": 1841,
+      "v4Bytes": 825,
+      "exact": true,
+      "sourceSHA256": "d290feaa28fb80a2b7ba46240039be70825fae7761afe28200e6b5fb97b6bd8f"
+    },
+    {
+      "case": "defects-period-37",
+      "sourceBytes": 1048576,
+      "gzipBytes": 7174,
+      "v3Bytes": 44976,
+      "v4Bytes": 3152,
+      "exact": true,
+      "sourceSHA256": "ba056444020fa545df34dda8c5970f4f5c987e6cd203acc3b2968752e8dec020"
+    },
+    {
+      "case": "bursts-16-every-4096",
+      "sourceBytes": 1048576,
+      "gzipBytes": 7129,
+      "v3Bytes": 5681,
+      "v4Bytes": 5681,
+      "exact": true,
+      "sourceSHA256": "816b7d386736fe69ebf02d7272afe2d1c3c7af2f80b1f35f76289679d1f381eb"
+    },
+    {
+      "case": "bursts-256-every-4096",
+      "sourceBytes": 1048576,
+      "gzipBytes": 70577,
+      "v3Bytes": 67422,
+      "v4Bytes": 67422,
+      "exact": true,
+      "sourceSHA256": "802821c935da9cbf81e384535a825a444ca39247766118ed52d1fd8ff714861e"
+    },
+    {
+      "case": "log-lines",
+      "sourceBytes": 1048576,
+      "gzipBytes": 73713,
+      "v3Bytes": 1048621,
+      "v4Bytes": 1048621,
+      "exact": true,
+      "sourceSHA256": "306e11cc502c21f5824fdbc9b9f4fd18930f580b051b443ee36b6761a699af3e"
+    }
+  ]
+}
